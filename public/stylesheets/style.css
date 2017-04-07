@@ -1,8 +1,110 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*{
+  font-family: 'Raleway', sans-serif;
+  background-color: #d2f4fa;
 }
 
-a {
-  color: #00B7FF;
+html{
+  height: 100%;
+}
+
+body{
+  background-color: #d2f4fa;
+
+}
+
+.logo{
+  font-family: 'Philosopher', sans-serif;
+  font-size: 12vmin;
+  margin-top: 100px;
+}
+
+.loginForm{
+  margin-top: 40px;
+}
+
+input{
+  margin: 5px 5px;
+  width: 400px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #C1BCAC;
+}
+
+#loginBtn{
+  width: 350px;
+  background-color: #DDD1B5;
+}
+
+.footer{
+  background-color: rgb(128, 177, 55);
+  height: 360px;
+}
+
+.footerImg{
+  float: left;
+  background-size: cover;
+  width: 100%;
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .logo{
+      margin-top: 330px;
+    }
+
+    .footer{
+      height: 1020px;
+    }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .logo{
+      margin-top: 350px;
+    }
+
+    .footer{
+      height: 1020px;
+    }
+}
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .logo{
+      margin-top: 450px;
+    }
+
+    .footer{
+      height: 930px;
+    }
+}
+/* ----------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .logo{
+      margin-top: 350px;
+    }
+
+    .footer{
+      height: 630px;
+    }
 }
