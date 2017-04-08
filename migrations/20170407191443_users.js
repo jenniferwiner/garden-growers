@@ -3,7 +3,7 @@ exports.up = function(knex) {
         table.increments()
         table.text('name').notNullable().defaultTo('')
         table.text('gardenname').notNullable().defaultTo('')
-
+        table.specificType('hashed_password', 'char(60)').notNullable()
     })
 };
 
