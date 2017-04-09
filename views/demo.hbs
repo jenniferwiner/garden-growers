@@ -1,41 +1,94 @@
-<div class="container-fluid text-center navbar">
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Feed</a>
-        <a href="#">Profile</a>
-        <a href="#">Data</a>
-        <a href="#">Logout</a>
+<div class="sun">
+</div>
+<div class="container-fluid text-center">
+    <h1 class='demologo profile'>Garden Name</h1>
+    <a href="/signup">Sign Up</a><br>
+      <button id="createPlantBtn" type="button" name="button">Add New Plant</button>
+</div><br>
+<div class="container-fluid text-center createForm hidden">
+  <form class="" action="index.html" method="post">
+    <input type="text" name="" value="" placeholder=""><br>
+    <input type="text" name="" value="" placeholder=""><br>
+    <input type="text" name="" value="" placeholder=""><br>
+    <input type="text" name="" value="" placeholder=""><br>
+    <input type="submit" name="Submit New Plant">
+  </form>
+</div>
+<div class="container-fluid" style="height: 500px;">
+  <div class="row">
+    <div class="col-xs-4">
+      <canvas id="myChart" width="400" height="400"></canvas>
     </div>
-    <!-- Use any element to open the sidenav -->
-    <span onclick="openNav()"><i class="fa fa-bars fa-5x" aria-hidden="true"></i>
-</span>
-    <div id="main">
-        <h1 class='demologo profile'>Garden Name</h1><br>
-        <h2>My Garden</h2>
-        <div class="container-fluid header text-center">
-            <h3>Plant Name</h3>
-            <img id="plantImg" src="http://www.motherearthliving.com/-/media/Images/MEL/Editorial/Articles/Magazine-Articles/2012/04-01/Whats-Wrong-with-My-Herbs-Growing-Basil-Tips/Basil-Plant.jpg" alt=""><br>
-            <p>Some text about muh plants Some text about muh plants Some text about muh plants</p><br>
-            <h3>Plant Name</h3>
-            <img id="plantImg" src="http://www.growweedeasy.com/sites/growweedeasy.com/files/fat-smelly-cannabis-cola.jpg" alt=""><br>
-            <p>Some text about muh plants Some text about muh plants Some text about muh plants</p><br>
-            <h3>Plant Name</h3>
-            <img id="plantImg" src="http://www.motherearthliving.com/-/media/Images/MEL/Editorial/Articles/Magazine-Articles/2012/04-01/Whats-Wrong-with-My-Herbs-Growing-Basil-Tips/Basil-Plant.jpg" alt=""><br>
-            <p>Some text about muh plants Some text about muh plants Some text about muh plants</p>
-            <h3>Plant Name</h3>
-            <img id="plantImg" src="http://www.motherearthliving.com/-/media/Images/MEL/Editorial/Articles/Magazine-Articles/2012/04-01/Whats-Wrong-with-My-Herbs-Growing-Basil-Tips/Basil-Plant.jpg" alt=""><br>
-            <p>Some text about muh plants Some text about muh plants Some text about muh plants</p><br>
-            <h3>Plant Name</h3>
-            <img id="plantImg" src="http://www.growweedeasy.com/sites/growweedeasy.com/files/fat-smelly-cannabis-cola.jpg" alt=""><br>
-            <p>Some text about muh plants Some text about muh plants Some text about muh plants</p><br>
-            <h3>Plant Name</h3>
-            <img id="plantImg" src="http://www.motherearthliving.com/-/media/Images/MEL/Editorial/Articles/Magazine-Articles/2012/04-01/Whats-Wrong-with-My-Herbs-Growing-Basil-Tips/Basil-Plant.jpg" alt=""><br>
-            <p>Some text about muh plants Some text about muh plants Some text about muh plants</p>
+    <div class="col-xs-4">
+      <canvas id="doughnutChart" width="400" height="400"></canvas>
+</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+
+</div>
+<div class="container text-center">
+  <h1>My Garden</h1>
+    <div class="row">
+      <div class="col-md-6">
+          <div class="card">
+              <img id="plantImg" class="card-img-top" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg" alt="Card image cap"><br>
+              <div class="card-block">
+                  <h4 class="card-title">Common Name{{common_name}}</h4>
+                  <p class="card-text">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description{{description}}</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
+                <li class="list-group-item">Date Added: {{date_added}}</li>
+              </ul>
+          </div>
+      </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <img id="plantImg" class="card-img-top" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg" alt="Card image cap"><br>
+                <div class="card-block">
+                    <h4 class="card-title">{{common_name}}</h4>
+                    <p class="card-text">{{description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
+                  <li class="list-group-item">Date Added: {{date_added}}</li>
+                </ul>
+            </div>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <img id="plantImg" class="card-img-top" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg" alt="Card image cap"><br>
+                <div class="card-block">
+                    <h4 class="card-title">{{common_name}}</h4>
+                    <p class="card-text">{{description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
+                  <li class="list-group-item">Date Added: {{date_added}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <img id="plantImg" class="card-img-top" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg" alt="Card image cap"><br>
+                <div class="card-block">
+                    <h4 class="card-title">{{common_name}}</h4>
+                    <p class="card-text">{{description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
+                  <li class="list-group-item">Date Added: {{date_added}}</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </div>
 <!-- BACKGROUND IMG -->
-<img class="footerImg demoImg container-fluid" src="http://i.imgur.com/fF54ty8.png" alt=""><br>
+<img class="footerImg" src="http://i.imgur.com/fF54ty8.png" alt="">
 <!-- FOOTER GRASS DIV-->
-<div class="container-fluid footer demoFooter">
-</div>
