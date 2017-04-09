@@ -1,117 +1,208 @@
-*{
-  font-family: 'Raleway', sans-serif;
-  background-color: #d2f4fa;
+* {
+    font-family: 'Raleway', sans-serif;
+    background-color: #d2f4fa;
 }
 
-html{
-  height: 100%;
+html {
+    height: 100%;
 }
 
-body{
-  background-color: #d2f4fa;
-
+body {
+    background-color: #d2f4fa;
 }
 
-.logo{
-  font-family: 'Philosopher', sans-serif;
-  font-size: 12vmin;
-  margin-top: 100px;
+#plantImg{
+  height: 200px;
+  width: 200px;
+}
+/*Main logo styles*/
+
+.logo, .demologo {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 12vmin;
+    margin-top: 100px;
 }
 
-.loginForm{
-  margin-top: 40px;
+.profile {
+    margin-top: 5px;
+}
+/*inputs across platform*/
+
+input {
+    margin: 5px 5px;
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #C1BCAC;
 }
 
-input{
-  margin: 5px 5px;
-  width: 400px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  background-color: #C1BCAC;
+/*login form*/
+.loginForm {
+    margin-top: 40px;
 }
 
-#loginBtn{
-  width: 350px;
-  background-color: #DDD1B5;
+/*login button*/
+#loginBtn {
+    width: 350px;
+    background-color: #DDD1B5;
 }
 
-.footer{
-  background-color: rgb(128, 177, 55);
-  height: 360px;
+.footer {
+    background-color: rgb(128, 177, 55);
+    height: 260px;
+}
+.footerImg {
+    float: left;
+    background-size: cover;
+    width: 100%;
 }
 
-.footerImg{
-  float: left;
-  background-size: cover;
-  width: 100%;
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+
+    width: 0;
+    /* 0 width - change this with JavaScript */
+
+    position: fixed;
+    /* Stay in place */
+
+    z-index: 1;
+    /* Stay on top */
+
+    top: 0;
+    left: 0;
+    background-color: rgba(172, 218, 226, 0.98);
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+
+    padding-top: 60px;
+    /* Place content 60px from the top */
+
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
 }
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/*Nav bar icon*/
+.fa-bars {
+    float: left;
+}
+/*SUN*/
+.sun {
+  float: right;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin: auto;
+	width:70px;
+	height:70px;
+	border-radius:50%;
+	background:rgb(250, 249, 205);
+	opacity:0.9;
+	box-shadow: 0px 0px 40px 15px rgb(250, 249, 205);
+}
+
 
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait */
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-    .logo{
-      margin-top: 330px;
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .logo {
+        margin-top: 330px;
     }
-
-    .footer{
-      height: 1020px;
+    .demologo{
+      margin-top: 30px;
+    }
+    .footer {
+        height: 1020px;
     }
 }
 
 /* ----------- iPhone 5 and 5S ----------- */
 
 /* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .logo{
-      margin-top: 350px;
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .logo {
+        margin-top: 350px;
     }
 
-    .footer{
-      height: 1020px;
+    .footer {
+        height: 1020px;
     }
 }
+
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .logo{
-      margin-top: 450px;
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .logo {
+        margin-top: 450px;
     }
 
-    .footer{
-      height: 930px;
+    .footer {
+        height: 930px;
     }
 }
+
 /* ----------- iPad 3 and 4 ----------- */
+
 /* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .logo{
-      margin-top: 350px;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .logo {
+        margin-top: 350px;
     }
 
-    .footer{
-      height: 630px;
+    .footer {
+        height: 630px;
     }
 }
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
 
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) {
+/*------ Large Screen -------*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .logo {
+        margin-top: 350px;
+    }
+
+    .footer {
+        height: 630px;
+    }
+}
+@media screen and (min-device-width: 1400px) and (max-device-width: 1800px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .footer{
+    height: 400px;
+  }
 }
