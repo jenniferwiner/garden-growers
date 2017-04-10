@@ -44,6 +44,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
+  // setting variables for knex insert
   let scientific_name = firstCharUpper(req.body.scientific_name);
   let common_name = firstCharUpper(req.body.common_name);
   let plant_id;
@@ -52,11 +53,12 @@ router.post('/', function(req, res, next) {
   let description = req.body.description;
   let plant_count = req.body.plant_count;
 
+  // insert plant function
   function insertUserPlant() {
     knex('user_plants')
     .insert({ user_id, plant_id, photo, description, plant_count })
     .then(() => {
-      res.redirect('/home')
+      res.redirect('/home');
     })
   }
 
@@ -80,12 +82,12 @@ router.post('/', function(req, res, next) {
         .insert({ common_name, scientific_name }, '*')
         .then(insertedPlant => {
           plant_id = insertedPlant.id;
-          insertedPlant();
+          insertUserPlant();
         });
       }
       else {
         plant_id = searchedPlant;
-        insertPlant();
+        insertUserPlant();
       }
     })
 });
