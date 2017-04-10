@@ -7,31 +7,31 @@ exports.seed = function(knex) {
                 knex('users').insert([{
                         id: 1,
                         name: 'Jen',
-                        gardenname: 'WildflowerHeaven',
+                        garden_name: 'WildflowerHeaven',
                         email: 'jeniwiner@gmail.com',
                         hashed_password: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
                         // youreawizard
-                        zipcode: 80302
+                        zipcode: 80302,
                         is_admin: false
                     },
                     {
                         id: 2,
                         name: 'Steve',
-                        gardenname: 'CarnivorousCircle',
+                        garden_name: 'CarnivorousCircle',
                         email: 'savagesteve@gmail.com',
                         hashed_password: '$2a$12$aOYY9P3WBGQhlJYFRyToo.nm6GfKoGCFYhv55OychlHphY1WvM5t.',
                         // venus
-                        zipcode: 80501
+                        zipcode: 80501,
                         is_admin: false
                     },
                     {
                         id: 3,
                         name: 'admin',
-                        gardenname: 'admin',
+                        garden_name: 'admin',
                         email: 'admin@gmail.com',
                         hashed_password: '$2a$12$bfIk1Fq6yvs78WxgtJohxOW2SWoc.iYUsYvzbYlpkISLnCW8i17PW',
                         // password
-                        admin: 80302
+                        zipcode: 80302,
                         is_admin: true
                     }
                 ])
