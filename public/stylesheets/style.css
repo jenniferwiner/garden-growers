@@ -32,6 +32,7 @@ display: none;
     font-family: 'Lobster', sans-serif;
     font-size: 12vmin;
     margin-top: 100px;
+    height: 120px;
 }
 
 .profile {
@@ -52,7 +53,11 @@ input {
 .loginForm {
     margin-top: 40px;
 }
-
+/*LIST GROUP ITEMS*/
+.list-group{
+  width: 500px;
+  text-align: left;
+}
 /*login button*/
 #loginBtn, #createPlantBtn, #submitCreateBtnDemo, #createPlantBtnDemo {
     width: 350px;

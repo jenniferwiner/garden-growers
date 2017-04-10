@@ -47,7 +47,7 @@ var myChart = new Chart(ctx, {
              borderColor: [
                "#7E6551",
                "#A4AF69",
-               "#FBFFB9",
+               "#f4fa8e",
                '#E1CE7A',
                '#E0DE72',
                '#4B5030'
