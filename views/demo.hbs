@@ -2,46 +2,56 @@
 </div>
 <div class="container-fluid text-center">
     <h1 class='demologo profile'>Garden Name</h1>
-    <a href="/signup">Sign Up</a><br>
-      <button id="createPlantBtn" type="button" name="button">Add New Plant</button>
+    <a href="/signup">Sign Up</a><br><br>
+    <button id="createPlantBtnDemo" type="button" name="button">Add New Plant</button><br>
 </div><br>
 <div class="container-fluid text-center createForm hidden">
-  <form class="" action="index.html" method="post">
-    <input type="text" name="" value="" placeholder=""><br>
-    <input type="text" name="" value="" placeholder=""><br>
-    <input type="text" name="" value="" placeholder=""><br>
-    <input type="text" name="" value="" placeholder=""><br>
-    <input type="submit" name="Submit New Plant">
-  </form>
+    <form class="" action="index.html" method="post">
+        <input type="text" name="" value="" placeholder=" Common Name"><br>
+        <input type="text" name="" value="" placeholder=" Scientic Name"><br>
+        <input type="text" name="" value="" placeholder=" Description"><br>
+        <input type="text" name="" value="" placeholder=" Date Added - (MM/DD/YYYY)"><br>
+        <input id="submitCreateBtnDemo" type="submit" name="Submit New Plant">
+    </form>
 </div>
 <div class="container-fluid" style="height: 500px;">
-  <div class="row">
-    <div class="col-xs-4">
-      <canvas id="myChart" width="400" height="400"></canvas>
+    <div class="row">
+        <div class="col-xs-4">
+            <canvas id="myChartDemo" width="400" height="400"></canvas>
+        </div>
+        <div class="col-xs-4">
+            <canvas id="doughnutChartDemo" width="400" height="400"></canvas>
+        </div>
+        <div class="col-xs-4 text-center">
+            <div class="col numberOfPlants">
+              <h1>Total # Of Plants: </h1><br>
+              <h1>62</h1>
+            </div><br>
+            <div class="col myMostCommon">
+              <h1>My Most Common Plants: </h1><br>
+              <h1>Apple, Herbs, Spinach</h1>
+            </div>
+        </div>
     </div>
-    <div class="col-xs-4">
-      <canvas id="doughnutChart" width="400" height="400"></canvas>
-</div>
-    <div class="col-md-4">.col-md-4</div>
-  </div>
 
 </div>
 <div class="container text-center">
-  <h1>My Garden</h1>
+    <h1>My Garden</h1>
     <div class="row">
-      <div class="col-md-6">
-          <div class="card">
-              <img id="plantImg" class="card-img-top" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg" alt="Card image cap"><br>
-              <div class="card-block">
-                  <h4 class="card-title">Common Name{{common_name}}</h4>
-                  <p class="card-text">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description{{description}}</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
-                <li class="list-group-item">Date Added: {{date_added}}</li>
-              </ul>
-          </div>
-      </div>
+        <div class="col-md-6">
+            <div class="card">
+                <img id="plantImg" class="card-img-top" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg" alt="Card image cap"><br>
+                <div class="card-block">
+                    <h4 class="card-title">Common Name{{common_name}}</h4>
+                    <p class="card-text">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description
+                        Description Description Description Description Description Description Description Description{{description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
+                    <li class="list-group-item">Date Added: {{date_added}}</li>
+                </ul>
+            </div>
+        </div>
 
         <div class="col-md-6">
             <div class="card">
@@ -51,8 +61,8 @@
                     <p class="card-text">{{description}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
-                  <li class="list-group-item">Date Added: {{date_added}}</li>
+                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
+                    <li class="list-group-item">Date Added: {{date_added}}</li>
                 </ul>
             </div>
         </div>
@@ -67,8 +77,8 @@
                     <p class="card-text">{{description}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
-                  <li class="list-group-item">Date Added: {{date_added}}</li>
+                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
+                    <li class="list-group-item">Date Added: {{date_added}}</li>
                 </ul>
             </div>
         </div>
@@ -81,8 +91,8 @@
                     <p class="card-text">{{description}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
-                  <li class="list-group-item">Date Added: {{date_added}}</li>
+                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
+                    <li class="list-group-item">Date Added: {{date_added}}</li>
                 </ul>
             </div>
         </div>
