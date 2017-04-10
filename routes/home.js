@@ -33,11 +33,10 @@ router.get('/', function(req, res, next) {
       })
       .innerJoin('users', 'users.id', 'user_plants.user_id')
       .innerJoin('plants', 'plants.id', 'user_plants.plant_id')
-      .select(['users.garden_name', 'plants.common_name', 'plants.scientific_name', 'user_plants.description'])
+      .select(['users.garden_name', 'plants.common_name', 'plants.scientific_name', 'user_plants.description', 'user_plants.photo'])
       .then((userPlants) => {
-        res.render('home', {
-          userPlants
-        })
+        let gardenName = userPlants[0].garden_name
+        res.render('home', { gardenName, userPlants })
       })
   }
 });
