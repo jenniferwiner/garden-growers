@@ -8,12 +8,11 @@ router.get('/', function(req, res, next) {
   knex('user_plants')
   .innerJoin('users', 'users.id','user_plants.user_id')
   .innerJoin('plants', 'plants.id', 'user_plants.plant_id')
-  .returning('*')
-  .then((data)=>{
-    console.log(data);
-    res.render('home')
+  .select(['users.garden_name', 'plants.common_name', 'plants.scientific_name', 'user_plants.description'])
+  .then((userPlants)=>{
+    console.log('data', userPlants);
+    res.render('home', {userPlants})
   })
-res.render('home')
 });
 
 router.post('/', function (req, res, next) {
