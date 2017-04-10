@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $('#createPlantBtn').click(() => {
+  $('#createPlantBtnDemo').click(() => {
     console.log('click');
     $('.createForm').toggleClass('hidden')
   })

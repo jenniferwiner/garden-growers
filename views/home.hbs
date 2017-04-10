@@ -1,0 +1,78 @@
+<div class="sun">
+</div>
+<div class="container-fluid text-center">
+    <h1 class='demologo profile'>Garden Name</h1>
+    <a href="/feed">Feed</a><br><br>
+    <button id="createPlantBtnDemo" type="button" name="button">Add New Plant</button><br>
+</div><br>
+<div class="container-fluid text-center createForm hidden">
+    <form class="" action="index.html" method="post">
+        <input type="text" name="" value="" placeholder=" Common Name"><br>
+        <input type="text" name="" value="" placeholder=" Scientic Name"><br>
+        <input type="text" name="" value="" placeholder=" Description"><br>
+        <input type="text" name="" value="" placeholder=" Date Added - (MM/DD/YYYY)"><br>
+        <input id="submitCreateBtnDemo" type="submit" name="Submit New Plant">
+    </form>
+</div>
+<div class="container-fluid" style="height: 500px;">
+    <div class="row">
+        <div class="col-xs-4">
+            <canvas id="myChartHome" width="400" height="400"></canvas>
+        </div>
+        <div class="col-xs-4">
+            <canvas id="doughnutChartHome" width="400" height="400"></canvas>
+        </div>
+        <div class="col-xs-4 text-center">
+            <div class="col numberOfPlants">
+              <h1>Total # Of Plants: </h1><br>
+              <h1>{{numberOfPlants}}</h1>
+            </div><br>
+            <div class="col myMostCommon">
+              <h1>My Most Common Plants: </h1><br>
+              <h1>{{mostCommonPlants}}</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+{{#each users}}
+{{#each plants}}
+{{#each user_plants}}
+<div class="container text-center">
+    <h1>{{garden_name}}</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <img id="plantImg" class="card-img-top" src="{{photo}}" alt="Card image cap"><br>
+                <div class="card-block">
+                    <h4 class="card-title">Common Name{{common_name}}</h4>
+                    <p class="card-text">{{description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
+                    <li class="list-group-item">Date Added: {{date_added}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <img id="plantImg" class="card-img-top" src="{{photo}}" alt="Card image cap"><br>
+                <div class="card-block">
+                    <h4 class="card-title">{{common_name}}</h4>
+                    <p class="card-text">{{description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
+                    <li class="list-group-item">Date Added: {{date_added}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+{{/each}}
+{{/each}}
+{{/each}}
+<!-- BACKGROUND IMG -->
+<img class="footerImg" src="http://i.imgur.com/fF54ty8.png" alt="">
+<!-- FOOTER GRASS DIV-->
