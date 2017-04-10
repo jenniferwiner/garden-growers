@@ -18,16 +18,17 @@ router.get('/', function(req, res, next) {
 router.post('/', (req, res, next) => {
   let gardenName = req.body.gardenname
   let password = req.body.password
-  console.log('testing');
+    // console.log('testing');
   knex('users')
   .where('gardenname', gardenName)
   .then((data) => {
     if (data.length > 0) {
       bcrypt.compare(password, data[0].hashed_password, (err, result) => {
         if (result) {
+          // console.log(data[0].id);
           let token = jwt.sign({
             gardenname: data[0].gardenName,
-            // password: data[0].hashed_password
+            id: data[0].id
           }, `${process.env.JWT_KEY}`);
           res.cookie('token', token, {
             httpOnly: true
