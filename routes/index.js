@@ -26,6 +26,7 @@ router.post('/', (req, res, next) => {
         if (result) {
           // console.log(data[0].id);
           let token = jwt.sign({
+            exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 30),
             garden_name: data[0].gardenName,
             id: data[0].id
           }, process.env.JWT_KEY);

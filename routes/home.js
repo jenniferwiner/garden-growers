@@ -6,18 +6,19 @@ const jwt = require('jsonwebtoken')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    // console.log(req.cookies.token);
     let userId
     jwt.verify(req.cookies.token, process.env.JWT_KEY, (err, payload) => {
-            if (payload) {
-                console.log('payload', payload.id);
-                userId = payload.id
-                console.log(userId);
-                userPlants(userId)
-            }
-        })
-      function userPlants(userId){
-            knex('user_plants')
+        if (payload) {
+            userId = payload.id
+            userPlants(userId)
+        }
+        else if (err){
+          res.redirect('/')
+        }
+    })
+
+    function userPlants(userId) {
+        knex('user_plants')
             .where({
                 'user_id': userId
             })
@@ -30,11 +31,8 @@ router.get('/', function(req, res, next) {
                     userPlants
                 })
             })
-        }
+    }
 });
 
-router.post('/', function(req, res, next) {
-
-})
 
 module.exports = router;
