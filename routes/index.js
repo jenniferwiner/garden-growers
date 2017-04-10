@@ -28,7 +28,7 @@ router.post('/', (req, res, next) => {
           let token = jwt.sign({
             garden_name: data[0].gardenName,
             id: data[0].id
-          }, `${process.env.JWT_KEY}`);
+          }, process.env.JWT_KEY);
           res.cookie('token', token, {
             httpOnly: true
           })
