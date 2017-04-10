@@ -6,30 +6,31 @@
     <button class="hvr-grow-shadow" id="createPlantBtn" type="button" name="button">Add New Plant</button><br>
 </div><br>
 <div class="container-fluid text-center createForm hidden">
-    <form class="" action="index.html" method="post">
+    <form class="" action="/home" method="post">
         <input type="text" name="common_name" value="" placeholder=" Common Name"><br>
         <input type="text" name="scientic_name" value="" placeholder=" Scientic Name"><br>
         <input type="text" name="description" value="" placeholder=" Description"><br>
+        <input type="text" name="plant_count" value="" placeholder=" Number of plants being planted"><br>
+        <input type="text" name="photo" value="" placeholder=" Add Plant Photo"><br>
         <button class="hvr-grow-shadow" id="submitCreateBtn" type="submit" name="">Submit New Plant</button>
     </form>
 </div>
 <div class="container-fluid" style="height: 500px;">
+  <div class="container" style="height: 500px;">
     <div class="row">
-        <div class="col-xs-4">
-            <canvas id="myChartHome" width="400" height="400"></canvas>
+        <div class="col-xs-6 numberOfPlants">
+          <h4>Total # Of Plants: </h4><br>
+          <h1>{{numberOfPlants}}</h1>
         </div>
-        <div class="col-xs-4">
-            <canvas id="doughnutChartHome" width="400" height="400"></canvas>
+        <div class="col-xs-6 myMostCommon">
+          <h4>My Most Common Plants: </h4><br>
+          <h1>{{mostCommonPlants}}</h1>
         </div>
-        <div class="col-xs-4 text-center">
-            <div class="col numberOfPlants">
-              <h1>Total # Of Plants: </h1><br>
-              <h1>{{numberOfPlants}}</h1>
-            </div><br>
-            <div class="col myMostCommon">
-              <h1>My Most Common Plants: </h1><br>
-              <h1>{{mostCommonPlants}}</h1>
-            </div>
+    </div>
+      <div class="row">
+          <div class="col-xs-12">
+              <canvas id="doughnutChartHome" width="400" height="150"></canvas>
+          </div>
         </div>
     </div>
 
