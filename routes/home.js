@@ -35,7 +35,6 @@ router.get('/', function(req, res, next) {
       .innerJoin('plants', 'plants.id', 'user_plants.plant_id')
       .select(['users.garden_name', 'plants.common_name', 'plants.scientific_name', 'user_plants.description'])
       .then((userPlants) => {
-        console.log('data', userPlants);
         res.render('home', {
           userPlants
         })
@@ -65,11 +64,10 @@ router.post('/', function(req, res, next) {
   // verify token
   jwt.verify(req.cookies.token, process.env.JWT_KEY, (err, payload) => {
     if (payload) {
-      user_id = payload.id
-      userPlants(user_id)
+      user_id = payload.id;
     }
     else if (err) {
-      res.redirect('/home')
+      res.redirect('/home');
     }
   });
 
@@ -81,12 +79,12 @@ router.post('/', function(req, res, next) {
         knex('plants')
         .insert({ common_name, scientific_name }, '*')
         .then(insertedPlant => {
-          plant_id = insertedPlant.id;
+          plant_id = insertedPlant[0].id;
           insertUserPlant();
         });
       }
       else {
-        plant_id = searchedPlant;
+        plant_id = searchedPlant[0].id;
         insertUserPlant();
       }
     })
