@@ -11,6 +11,7 @@ exports.seed = function(knex) {
                         email: 'jeniwiner@gmail.com',
                         hashed_password: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
                         // youreawizard
+                        zipcode: 80302
                         is_admin: false
                     },
                     {
@@ -20,6 +21,7 @@ exports.seed = function(knex) {
                         email: 'savagesteve@gmail.com',
                         hashed_password: '$2a$12$aOYY9P3WBGQhlJYFRyToo.nm6GfKoGCFYhv55OychlHphY1WvM5t.',
                         // venus
+                        zipcode: 80501
                         is_admin: false
                     },
                     {
@@ -29,6 +31,7 @@ exports.seed = function(knex) {
                         email: 'admin@gmail.com',
                         hashed_password: '$2a$12$bfIk1Fq6yvs78WxgtJohxOW2SWoc.iYUsYvzbYlpkISLnCW8i17PW',
                         // password
+                        admin: 80302
                         is_admin: true
                     }
                 ])
