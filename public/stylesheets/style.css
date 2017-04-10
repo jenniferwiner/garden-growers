@@ -60,9 +60,20 @@ input {
     border: none;
     border-radius: 2.5px;
 }
-
+/*FOOT - SVG - IMG*/
+.footerFeed{
+    margin-top: 250px;
+    background-color: rgb(128, 177, 55);
+    height: 900px;
+}
+.footerImgFooter {
+  margin-top: 150px;
+    float: left;
+    background-size: cover;
+    width: 100%;
+}
 .footer {
-  margin-top: 50px;
+    margin-top: 50px;
     background-color: rgb(128, 177, 55);
     height: 260px;
 }
@@ -116,6 +127,12 @@ input {
     .footer {
         height: 1020px;
     }
+    .list-group{
+      width: 500px;
+    }
+    .footerImgFooter{
+      margin-top: 170px;
+    }
 }
 
 /* ----------- iPhone 5 and 5S ----------- */
@@ -149,14 +166,21 @@ input {
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
     .logo {
-        margin-top: 350px;
+        margin-top: 50px;
     }
 
     .footer {
         height: 630px;
     }
+    .footerImgFooter{
+      margin-top: 190px;
+    }
 }
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .logo {
+      margin-top: 20px;
+  }
+}
 
 /*------ Large Screen -------*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
