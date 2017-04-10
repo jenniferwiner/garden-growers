@@ -15,7 +15,18 @@ router.get('/', function(req, res, next) {
   })
 });
 
-router.post('/', function (req, res, next) {
+let insertPlant = (data) => knex('user_plants').insert(data).returning(['id', 'plants.common_name', 'plants.scientific_name', 'user_plants.description'])
+
+router.post('/home', function (req, res, next) {
+  insertPlant(req.body)
+    .then(data => {
+      console.log(data);
+      res.render('/home')
+    })
+.catch((err) => {
+  next(err);
+});
+
 
 })
 
