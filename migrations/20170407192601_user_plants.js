@@ -5,6 +5,7 @@ exports.up = function(knex) {
       table.integer('plant_id').notNullable().references('plants.id').onDelete('cascade')
       table.text('photo').notNullable().defaultTo('http://www.webweaver.nu/clipart/img/nature/flowers/potted-plant.png')
       table.text('description')
+      table.integer('plant_count').notNullable().defaultTo(1)
       table.timestamps(true, true)
     })
 };

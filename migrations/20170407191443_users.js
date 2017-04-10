@@ -5,6 +5,7 @@ exports.up = function(knex) {
         table.text('garden_name').notNullable().defaultTo('')
         table.text('email').notNullable().defaultTo('')
         table.specificType('hashed_password', 'char(60)').notNullable()
+        table.integer('zipcode').notNullable().defaultTo('')
         table.boolean('is_admin').notNullable().defaultTo(false)
     })
 };
