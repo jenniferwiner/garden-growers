@@ -16,11 +16,6 @@ let insertPlant = (data) => knex('plants').insert(data).returning(['id', 'plants
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // console.log(req.cookies.token);
-=======
->>>>>>> 63f6ed8fbdcf68403b036fad632181ae4a4a6667
     let userId
     jwt.verify(req.cookies.token, process.env.JWT_KEY, (err, payload) => {
         if (payload) {
@@ -49,9 +44,7 @@ router.get('/', function(req, res, next) {
     }
 });
 
-<<<<<<< HEAD
 router.post('/', function(req, res, next) {
-=======
   knex('user_plants')
     .innerJoin('users', 'users.id', 'user_plants.user_id')
     .innerJoin('plants', 'plants.id', 'user_plants.plant_id')
@@ -94,11 +87,6 @@ router.post('/home', function(req, res, next) {
     .catch((err) => {
       next(err);
     });
-
->>>>>>> plant_posting
-
 })
-=======
->>>>>>> 63f6ed8fbdcf68403b036fad632181ae4a4a6667
 
 module.exports = router;
