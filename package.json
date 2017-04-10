@@ -24,6 +24,11 @@
     "pg": "^6.1.5",
     "serve-favicon": "~2.3.2"
   },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
+  },
   "engines": {
     "node": "v7.7.2"
   }
