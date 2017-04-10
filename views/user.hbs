@@ -1,7 +1,7 @@
 <div class="sun">
 </div>
 <div class="container-fluid text-center">
-    <h1 class='demologo profile'>Garden Name</h1><br>
+    <h1 class='demologo profile'>{{gardenName}}</h1><br>
     <p>slogan about us something nice</p>
     <a href="/feed"><button type="button" name="button">Feed</button></a>
     <a href="/home"><button type="button" name="button">Home</button></a><br><br>
@@ -27,43 +27,25 @@
     </div>
 
 </div>
-{{#each users}}
-{{#each plants}}
-{{#each user_plants}}
 <div class="container text-center">
+    {{#each gardenData}}
     <div class="row">
         <div class="col-md-6">
             <div class="card">
-                <img id="plantImg" class="card-img-top" src="{{photo}}" alt="Card image cap"><br>
+                <img id="plantImg" class="card-img-top" src="{{this.photo}}" alt="Card image cap"><br>
                 <div class="card-block">
-                    <h4 class="card-title">Common Name{{common_name}}</h4>
-                    <p class="card-text">{{description}}</p>
+                    <h4 class="card-title">{{this.common_name}}</h4>
+                    <p class="card-text">{{this.description}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
-                    <li class="list-group-item">Date Added: {{date_added}}</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card">
-                <img id="plantImg" class="card-img-top" src="{{photo}}" alt="Card image cap"><br>
-                <div class="card-block">
-                    <h4 class="card-title">{{common_name}}</h4>
-                    <p class="card-text">{{description}}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
-                    <li class="list-group-item">Date Added: {{date_added}}</li>
+                    <li class="list-group-item">Scientific Name: {{this.scientific_name}}</li>
+                    <li class="list-group-item">Date Added: {{this.created_at}}</li>
                 </ul>
             </div>
         </div>
     </div>
+    {{/each}}
   </div>
-{{/each}}
-{{/each}}
-{{/each}}
 <!-- BACKGROUND IMG -->
 <img class="footerImg" src="http://i.imgur.com/fF54ty8.png" alt="">
 <!-- FOOTER GRASS DIV-->
