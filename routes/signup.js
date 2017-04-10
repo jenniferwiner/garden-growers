@@ -13,13 +13,14 @@ router.get('/', (req, res, next)  => {
   res.render('signup');
 });
 
-let insertUser = (data) => knex('users').insert(data).returning(['id', 'gardenname', 'email', 'zipcode', 'name'])
+let insertUser = (data) => knex('users').insert(data).returning(['id', 'garden_name', 'email', 'zipcode', 'name'])
 
 
 router.post('/', (req, res, next) => {
-  let hashed = bcrypt.hash(req.body.password, 12)
+  let hashed = bcrypt.hashSync(req.body.password, 12)
     delete req.body.password;
     req.body.hashed_password = hashed
+    console.log(req.body);
     insertUser(req.body)
       .then(data => {
         console.log(data);
