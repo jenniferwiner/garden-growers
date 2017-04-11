@@ -16,16 +16,14 @@ $(document).ready(() => {
             error: () => {}
         })
     })
-<<<<<<< HEAD
     // toggle edit plant
     $('.editBtn').click(() => {
       $('.editForm').toggleClass('hidden')
-=======
 
     $('.editSubmit').click(() => {
         let id = $(event.target).attr('data-id')
         let common_name =
-        let 
+        let
         $.ajax({
             method: 'PATCH',
             url: '/home',
@@ -39,7 +37,6 @@ $(document).ready(() => {
             },
             error: () => {}
         })
->>>>>>> new patch start
     })
     // toggle to add new plant
     $('#createPlantBtnDemo').click(() => {
