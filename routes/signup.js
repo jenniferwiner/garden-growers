@@ -1,61 +1,37 @@
-'use strict';
+'use strict'
 
-// SLOGAN : growing taller each day, share your garden with everyone, learn to grow from the garden community, community gardening online, networking with fellow gardeners, growing taller together.
-
-const express = require('express');
-const router = express.Router();
-const bcrypt = require('bcrypt');
-const knex = require('../knex');
-
+const express = require('express')
+const router = express.Router()
+const bcrypt = require('bcrypt')
+const knex = require('../knex')
+const boom = require('boom')
 
 /* GET users listing. */
-router.get('/', (req, res, next)  => {
-  res.render('signup');
-});
-
-let insertUser = (data) => knex('users').insert(data).returning(['id', 'garden_name', 'email', 'zipcode', 'name'])
-
-
-router.post('/', (req, res, next) => {
-  let hashed = bcrypt.hashSync(req.body.password, 12)
-    delete req.body.password;
-    req.body.hashed_password = hashed
-    console.log(req.body);
-    insertUser(req.body)
-      .then(data => {
-        console.log(data);
-        res.redirect('/home')
-      })
-  .catch((err) => {
-    next(err);
-  });
-
+router.get('/', function(req, res, next) {
+  res.render('signup')
 })
 
-// router.post('/signup', (req, res, next) => {
-//     let email = req.body.email
-//     let gardenName = req.body.gardenname
-//     let id = req.body.id
-//     let name = req.body.name
-//     let pass = req.body.password
-//     let saltHash = bcrypt.hashSync(pass, 12)
-//     knex('users')
-//         // .returning([ 'first_name', 'last_name', 'email'])
-//         .insert({
-//             'id': id,
-//             'name': name,
-//             'gardenname': gardenName,
-//             'email': email,
-//             'hashed_password': saltHash
-//         })
-//         .then((data) => {
-//             // res.send(humps.camelizeKeys(data[0]))
-//             res.redirect('/home')
-//         })
-//       })
-//
+router.post('/', function(req, res, next) {
+  knex('users')
+  .where('garden_name', req.body.garden_name)
+  .then(user => {
+    if (user.length !== 0) {
+      return next(boom.create(400, 'Garden Name already exists'))
+    }
+    let hashed = bcrypt.hashSync(req.body.password, 12)
+    delete req.body.password
+    req.body.hashed_password = hashed
 
+    knex('users')
+    .insert(req.body)
+    .returning(['id', 'garden_name', 'email', 'zipcode', 'name'])
+    .then(data => {
+      res.redirect('/home')
+    })
+    .catch((err) => {
+      next(err)
+    })
+  })
+})
 
-
-
-module.exports = router;
+module.exports = router

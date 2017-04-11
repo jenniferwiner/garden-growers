@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var knex = require('../knex');
-var jwt = require('jsonwebtoken');
+const express = require('express')
+const router = express.Router()
+const knex = require('../knex')
+const jwt = require('jsonwebtoken')
 /* GET users listing. */
 router.get('/', (req, res, next) => {
   knex('users')
@@ -9,9 +9,9 @@ router.get('/', (req, res, next) => {
   .join('plants', 'user_plants.plant_id', '=', 'plants.id')
   .select(['users.id', 'plants.common_name', 'plants.scientific_name', 'user_plants.photo', 'users.garden_name', 'user_plants.description', 'user_plants.created_at'])
   .then((feedData) => {
-    res.render('feed', { feedData });
+    res.render('feed', { feedData })
   })
-});
+})
 
 router.get('/:id', (req, res, next) => {
   let userId = req.params.id
@@ -22,9 +22,8 @@ router.get('/:id', (req, res, next) => {
   .where('users.id', userId)
   .then((gardenData) => {
     let gardenName = gardenData[0].garden_name
-    res.render('user', { gardenData, gardenName });
+    res.render('user', { gardenData, gardenName })
   })
-
 })
 
-module.exports = router;
+module.exports = router

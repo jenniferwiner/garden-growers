@@ -13,9 +13,10 @@ $(document).ready(() => {
           location.reload()
         }
       },
-      error: () => {}
+      error: (err) => {
+        console.log('Error: ', err)
+      }
     })
-
   })
   // toggle edit plant
   $('.editBtn').click(() => {
@@ -29,25 +30,19 @@ $(document).ready(() => {
     $('.createForm').toggleClass('hidden')
   })
   // random qutoe gen
-  let quoteArray = ["Flowers always make people better, happier, and more helpful; they are sunshine, food and medicine for the soul. -Luther Burbank", "In the spring, at the end of the day, you should smell like dirt. -Margaret Atwood", "If you have a garden and a library, you have everything you need.  -Marcus Tullius Cicero", "Flowers are restful to look at. They have neither emotions nor conflicts. -Sigmund Freud", "To see a world in a grain of sand and heaven in a wild flower Hold infinity in the palms of your hand and eternity in an hour.  -William Blake", "A garden must combine the poetic and the mysterious with a feeling of serenity and joy.  -Luis Barragan", "Show me your garden and I shall tell you what you are.  -Alfred Austin", "Weeds are flowers too, once you get to know them.  -A. A. Milne", "What is a weed? A plant whose virtues have never been discovered.  -Ralph Waldo Emerson"]
-  var randomQuote = quoteArray[Math.floor(Math.random() * quoteArray.length)]
+  let quoteArray = ['Flowers always make people better, happier, and more helpful; they are sunshine, food and medicine for the soul. -Luther Burbank', 'In the spring, at the end of the day, you should smell like dirt. -Margaret Atwood', 'If you have a garden and a library, you have everything you need.  -Marcus Tullius Cicero', 'Flowers are restful to look at. They have neither emotions nor conflicts. -Sigmund Freud', 'To see a world in a grain of sand and heaven in a wild flower Hold infinity in the palms of your hand and eternity in an hour.  -William Blake', 'A garden must combine the poetic and the mysterious with a feeling of serenity and joy.  -Luis Barragan', 'Show me your garden and I shall tell you what you are.  -Alfred Austin', 'Weeds are flowers too, once you get to know them.  -A. A. Milne', 'What is a weed? A plant whose virtues have never been discovered.  -Ralph Waldo Emerson']
+  let randomQuote = quoteArray[Math.floor(Math.random() * quoteArray.length)]
   $('.randomQuote').append(randomQuote)
-
-
-  console.log("userZipCode=", userZipCode);
 
   // ///////AJAX///// //
   $.ajax({
     method: 'GET',
-
     // WU KEY      155ad056960470aa
     url: `http://api.wunderground.com/api/155ad056960470aa/conditions/q/${userZipCode}.json`,
-
     datatype: 'json',
-
     success: function(data) {
       let weatherInfo = data
-      console.log(weatherInfo);
+      console.log(weatherInfo)
 
       // Filling the weather object
       let weatherObj = {
@@ -92,37 +87,36 @@ $(document).ready(() => {
       weatherObj.forecast.us = obs.weather
       weatherObj.pressure.us = obs.pressure_in
 
-
       function us() {
         $('#header-icon').append('Conditions <img src=' + weatherObj.icon.us + '>')
         $('#forecast').append('<h4>' + weatherObj.forecast.us + '</h4>')
-        $('#pressure').append('<h4>' + weatherObj.pressure.us + ' in' + '</h4>')
+        $('#pressure').append('<h4>' + weatherObj.pressure.us + ' in</h4>')
         $('#humidity').append('<h4>' + weatherObj.humidity.us + '</h4>')
-        $('#temp').append('<h4>' + weatherObj.temp.us + ' \u00B0f' + '</h4>')
-        $('#precip').append('<h4>' + weatherObj.precip.us + ' in' + '</h4>')
-        $('#wSpeed').append('<h4>' + weatherObj.windSp.us + ' mph' + '</h4>')
-        $('#vis').append('<h4>' + weatherObj.vis.us + ' mi' + '</h4>')
+        $('#temp').append('<h4>' + weatherObj.temp.us + ' \u00B0f</h4>')
+        $('#precip').append('<h4>' + weatherObj.precip.us + ' in</h4>')
+        $('#wSpeed').append('<h4>' + weatherObj.windSp.us + ' mph</h4>')
+        $('#vis').append('<h4>' + weatherObj.vis.us + ' mi</h4>')
         $('#wind-condition').append('<h4>' + weatherObj.windStr.us + '</h4>')
         $('#bearing').append('<h4>' + weatherObj.windDir.us + '</h4>')
-        $('#gust').append('<h4>' + weatherObj.windGust.us + ' mph' + '</h4>')
+        $('#gust').append('<h4>' + weatherObj.windGust.us + ' mph</h4>')
       }
       us()
 
       function eu() {
         $('#header-icon').append('Conditions <img src=' + weatherObj.icon.eu + '>')
         $('#forecast').append('<h4>' + weatherObj.forecast.eu + '</h4>')
-        $('#pressure').append('<h4>' + weatherObj.pressure.eu + ' mb' + '</h4>')
+        $('#pressure').append('<h4>' + weatherObj.pressure.eu + ' mb</h4>')
         $('#humidity').append('<h4>' + weatherObj.humidity.eu + '</h4>')
-        $('#temp').append('<h4>' + weatherObj.temp.eu + ' \u00B0c' + '</h4>')
-        $('#precip').append('<h4>' + weatherObj.precip.eu + ' mm' + '</h4>')
-        $('#wSpeed').append('<h4>' + weatherObj.windSp.eu + ' kph' + '</h4>')
-        $('#vis').append('<h4>' + weatherObj.vis.eu + ' km' + '</h4>')
+        $('#temp').append('<h4>' + weatherObj.temp.eu + ' \u00B0c</h4>')
+        $('#precip').append('<h4>' + weatherObj.precip.eu + ' mm</h4>')
+        $('#wSpeed').append('<h4>' + weatherObj.windSp.eu + ' kph</h4>')
+        $('#vis').append('<h4>' + weatherObj.vis.eu + ' km</h4>')
         $('#wind-condition').append('<h4>' + weatherObj.windStr.eu + '</h4>')
         $('#bearing').append('<h4>' + weatherObj.windDir.eu + '</h4>')
-        $('#gust').append('<h4>' + weatherObj.windGust.eu + ' kph' + '</h4>')
+        $('#gust').append('<h4>' + weatherObj.windGust.eu + ' kph</h4>')
       }
 
-      let toggle = true;
+      let toggle = true
 
       // METRIC TOGGLE
       $('#toggle').click(function() {
@@ -146,7 +140,7 @@ $(document).ready(() => {
           eu()
         }
       })
-    } // <- what is this ?
+    }
   })
 
   // toggle edit plant
@@ -155,22 +149,22 @@ $(document).ready(() => {
 
     $('.editSubmit').click(() => {
       let id = $(event.target).attr('data-id')
-      let common_name =
-        let
-          $.ajax({
-            method: 'PATCH',
-            url: '/home',
-            data: {
+      $.ajax({
+        method: 'PATCH',
+        url: '/home',
+        data: {
 
-              id: id
-            },
-            success: (data) => {
-              if (data) {
-                location.reload()
-              }
-            },
-            error: () => {}
-          })
+          id: id
+        },
+        success: (data) => {
+          if (data) {
+            location.reload()
+          }
+        },
+        error: (err) => {
+          console.log('Error: ', err)
+        }
+      })
     })
   })
 })

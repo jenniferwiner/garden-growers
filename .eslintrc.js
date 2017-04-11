@@ -26,12 +26,18 @@ module.exports = {
     "no-use-before-define": "off",
     "prefer-template": "off",
     "brace-style": ["error", "1tbs"],
-    "indent": ["error", 2, { "SwitchCase": 1 }]
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "prefer-const": "off",
+    "max-statements": "off",
+    "new-cap": "off",
+    "max-len": "off",
+    "max-params": "off"
   },
   "globals": {
     "chai": true
   },
   "env": {
-    "node": true
+    "node": true,
+    "mocha": true,
   }
 };
