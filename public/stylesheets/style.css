@@ -2,7 +2,6 @@
     font-family: 'Raleway', sans-serif;
 }
 
-
 html {
     height: 100%;
     background-color: #d2f4fa;
@@ -12,25 +11,29 @@ body {
     background-color: #d2f4fa;
 }
 
-a{
-  font-size: 2.5vmin;
-  color: #000;
+a {
+    font-size: 2.5vmin;
+    color: #000;
 }
 
 input:hover {
-  border: 1px solid #968f76
+    border: 1px solid #968f76
 }
+
 
 /*HIDDEN*/
-.hidden{
-display: none;
+
+.hidden {
+    display: none;
 }
 
-#plantImg{
-  height: 400px;
-  width: 400px;
-  border-radius: 5px;
+#plantImg {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
 }
+
+
 /*Main logo styles*/
 
 .logo, .demologo {
@@ -44,6 +47,8 @@ display: none;
 .profile {
     margin-top: 5px;
 }
+
+
 /*inputs across platform*/
 
 input {
@@ -55,17 +60,25 @@ input {
     background-color: #C1BCAC;
 }
 
+
 /*login form*/
+
 .loginForm {
     margin-top: 40px;
 }
+
+
 /*LIST GROUP ITEMS*/
-.list-group{
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
+
+.list-group {
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
 }
+
+
 /*login button*/
+
 #loginBtn, #createPlantBtn, #submitCreateBtnDemo, #createPlantBtnDemo, #submitCreateBtn, .feedBtn, .homeBtn, .gardenView, .signupDemoBtn {
     width: 350px;
     height: 30px;
@@ -73,7 +86,10 @@ input {
     border: none;
     border-radius: 2.5px;
 }
+
+
 /*BUUTTTONS*/
+
 .hvr-bubble-top {
     display: inline-block;
     vertical-align: middle;
@@ -97,7 +113,6 @@ input {
     top: 0;
     border-width: 0 10px 10px;
     border-color: transparent transparent #DDD1B5
-
 }
 
 .hvr-bubble-top:active:before, .hvr-bubble-top:focus:before, .hvr-bubble-top:hover:before {
@@ -123,301 +138,371 @@ input {
     transform: scale(1.1)
 }
 
+
 /*FOOT - SVG - IMG*/
-.footerFeed{
+
+.footerFeed {
     margin-top: 250px;
     background-color: rgb(128, 177, 55);
     height: 900px;
 }
+
 .footerImgFooter {
-  margin-top: 150px;
+    margin-top: 150px;
     float: left;
     background-size: cover;
     width: 100%;
 }
+
 .footer {
     margin-top: 60px;
     background-color: rgb(128, 177, 55);
     height: 200px;
 }
+
 .footerImg {
     float: left;
     background-size: cover;
     width: 100%;
 }
+
+
 /*most common plants and number of plants*/
-.numberOfPlants{
-  height: 100px;
-  width: 450px;
-  background-color: #DDD1B5;
-  border-radius: 5px;
-  margin: 50px;
-}
-.myMostCommon{
-  height: 100px;
-  width: 450px;
-  background-color: #DDD1B5;
-  border-radius: 5px;
+
+.numberOfPlants {
+    height: 100px;
+    width: 450px;
+    background-color: #DDD1B5;
+    border-radius: 5px;
     margin: 50px;
 }
-.mygarden{
-  margin-top: 250px;
+
+.myMostCommon {
+    height: 100px;
+    width: 450px;
+    background-color: #DDD1B5;
+    border-radius: 5px;
+    margin: 50px;
 }
+
+.mygarden {
+    margin-top: 250px;
+}
+
+
 /*SUN*/
+
 .sun {
-  float: right;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	margin: auto;
-	width:70px;
-	height:70px;
-	border-radius:50%;
-	background:rgb(250, 249, 205);
-	opacity:0.9;
-	box-shadow: 0px 0px 40px 15px rgb(250, 249, 205);
+    float: right;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgb(250, 249, 205);
+    opacity: 0.9;
+    box-shadow: 0px 0px 40px 15px rgb(250, 249, 205);
 }
+
 
 /*Clouds*/
 
 .clouds {
-  width: 200px;
-  height: 300px;
-  position: absolute;
+    width: 200px;
+    height: 300px;
+    position: absolute;
 }
+
 .cloud0 {
-	top: -20px;
-  z-index: 100;
-  fill: rgba(252, 252, 252, 0.5);
-  -webkit-animation: move 30s linear infinite;
-  -moz-animation: move 30s linear infinite;
-  -o-animation: move 30s linear infinite;
-  animation: move 30s linear infinite;
+    top: -20px;
+    z-index: 100;
+    fill: rgba(252, 252, 252, 0.5);
+    -webkit-animation: move 30s linear infinite;
+    -moz-animation: move 30s linear infinite;
+    -o-animation: move 30s linear infinite;
+    animation: move 30s linear infinite;
 }
+
 .cloud1 {
-	top: 80px;
-  z-index: 100;
-  fill: rgba(252, 252, 252, 0.5);
-  -webkit-animation: move 25s linear infinite;
-  -moz-animation: move 25s linear infinite;
-  -o-animation: move 25s linear infinite;
-  animation: move 25s linear infinite;
+    top: 80px;
+    z-index: 100;
+    fill: rgba(252, 252, 252, 0.5);
+    -webkit-animation: move 25s linear infinite;
+    -moz-animation: move 25s linear infinite;
+    -o-animation: move 25s linear infinite;
+    animation: move 25s linear infinite;
 }
 
 .cloud2 {
-	top: -60px;
-  z-index: 200;
-  fill: rgba(252, 252, 252, 0.5);
-  -webkit-animation: move 30s linear 10s infinite backwards;
-  -moz-animation: move 30s linear 10s infinite backwards;
-  -o-animation: move 30s linear 10s infinite backwards;
-  animation: move 30s linear 10s infinite backwards;
+    top: -60px;
+    z-index: 200;
+    fill: rgba(252, 252, 252, 0.5);
+    -webkit-animation: move 30s linear 10s infinite backwards;
+    -moz-animation: move 30s linear 10s infinite backwards;
+    -o-animation: move 30s linear 10s infinite backwards;
+    animation: move 30s linear 10s infinite backwards;
 }
 
 .cloud3 {
-	top: 40px;
-  z-index: 200;
-  fill: rgba(252, 252, 252, 0.5);
-  -webkit-animation: move 35s linear 10s infinite backwards;
-  -moz-animation: move 35s linear 10s infinite backwards;
-  -o-animation: move 35s linear 10s infinite backwards;
-  animation: move 35s linear 10s infinite backwards;
+    top: 40px;
+    z-index: 200;
+    fill: rgba(252, 252, 252, 0.5);
+    -webkit-animation: move 35s linear 10s infinite backwards;
+    -moz-animation: move 35s linear 10s infinite backwards;
+    -o-animation: move 35s linear 10s infinite backwards;
+    animation: move 35s linear 10s infinite backwards;
 }
 
 @-webkit-keyframes move {
-  from {-webkit-transform: translateX(-400px);}
-  to {-webkit-transform: translateX(1350px);}
-
+    from {
+        -webkit-transform: translateX(-400px);
+    }
+    to {
+        -webkit-transform: translateX(1350px);
+    }
 }
+
+
 /*BIRD*/
+
 #bird {
-  animation: fly 10s linear infinite;
+    animation: fly 10s linear infinite;
 }
 
 @keyframes fly {
-  0% {
-    transform: translateX(90vw);
-  }
-  100% {
-    transform: translateX(-50vw);
-  }
+    0% {
+        transform: translateX(90vw);
+    }
+    100% {
+        transform: translateX(-50vw);
+    }
 }
 
 #wing-front, #wing-rear {
-  transform-style: preserve-3d;
-  transform-origin: bottom center;
+    transform-style: preserve-3d;
+    transform-origin: bottom center;
 }
 
 #wing-front {
-  animation: flap-front 2s ease-in infinite;
-  perspective: 1000px;
+    animation: flap-front 2s ease-in infinite;
+    perspective: 1000px;
 }
+
 #wing-rear {
-  animation: flap-rear 2s ease-in infinite;
-  perspective: -1000px;
+    animation: flap-rear 2s ease-in infinite;
+    perspective: -1000px;
 }
 
 @keyframes flap-front {
-  0%, 100% {
-  transform: rotateX(0deg);
-  }
-  50% {
-  transform: rotateX(180deg);
-  }
+    0%, 100% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(180deg);
+    }
 }
+
 @keyframes flap-rear {
-  0%, 100% {
-  transform: rotateX(0deg);
-  }
-  50% {
-  transform: rotateX(-180deg);
-  }
+    0%, 100% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(-180deg);
+    }
 }
+
 
 /*CARD*/
-hr{
-  margin:0;
+
+hr {
+    margin: 0;
 }
-.ml-5{
-  margin-left: 5px;
+
+.ml-5 {
+    margin-left: 5px;
 }
-.top-img img{
-  width: 100%;
-  height: 260px;
+
+.top-img img {
+    width: 100%;
+    height: 260px;
 }
-.panel{
+
+.panel {
+    font-family: 'Delius', cursive;
+    padding: 0;
+    height: 560px;
+    overflow: hidden !important;
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.panelCard{
   font-family: 'Delius', cursive;
   padding: 0;
-  height: 560px;
+  height: 160px;
   overflow: hidden !important;
   position: relative;
-  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
-}
-.panel .panel-body{
-  padding: 0 !important;
-}
-.top-content{
-  padding: 8px 10px 0px 10px;
-}
-.extra-info{
-  padding-top: 4px;
-}
-.large{
-  font-size: large;
-}
-.xx-large{
-  font-size: xx-large;
-}
-.x-large{
-  font-size: large;
-}
-
-.question{
-
-}
-.price{
-  padding: 0 !important;
-}
-
-.price .avg{
-  margin-top: -10px;
-  margin-bottom: 6px;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #C1BCAC;
   border-radius: 5px;
-  position: relative
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.avg .currency{
-  position: absolute;
-  font-size: small;
-  bottom: 0;
-  right: 5px;
+.panel .panel-body {
+    padding: 0 !important;
 }
+
+.top-content {
+    padding: 8px 10px 0px 10px;
+}
+
+.x-large {
+    font-size: large;
+}
+
+.price {
+    padding: 0 !important;
+}
+
+.price .avg {
+    margin-top: -10px;
+    margin-bottom: 6px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    position: relative
+}
+
+.avg .currency {
+    position: absolute;
+    font-size: small;
+    bottom: 0;
+    right: 5px;
+}
+
+.left {
+    height: 100px;
+    width: 45%;
+    float: left;
+    margin: 10px 10px;
+}
+
+.right {
+    height: 100px;
+    width: 45%;
+    float: right;
+    margin: 10px 10px;
+}
+
+
 /*CHARTS*/
-#doughnutChartHome{
-  margin-bottom: 10px;
+
+#doughnutChartHome {
+  margin-top: 100px;
+    margin-bottom: 20px;
 }
+
+
 /* ----------- iPhone 4 and 4S ----------- */
 
+
 /* Portrait */
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     .logo {
         margin-top: 330px;
     }
-    .demologo{
-      margin-top: 30px;
+    .demologo {
+        margin-top: 30px;
     }
     .footer {
         height: 1020px;
     }
-    .list-group{
-      width: 500px;
+    .list-group {
+        width: 500px;
     }
-    .footerImgFooter{
-      margin-top: 170px;
+    .footerImgFooter {
+        margin-top: 170px;
+    }
+    .left {
+        width: 100%;
+        float: none;
+    }
+    .right {
+        width: 100%;
+        float: none;
     }
 }
 
+
 /* ----------- iPhone 5 and 5S ----------- */
 
+
 /* Portrait and Landscape */
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     .logo {
         margin-top: 350px;
     }
-
     .footer {
         height: 1020px;
     }
 }
 
+
 /* ----------- iPhone 6 ----------- */
 
+
 /* Portrait and Landscape */
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     .logo {
         margin-top: 450px;
     }
-
     .footer {
         height: 930px;
     }
 }
 
+
 /* ----------- iPad 3 and 4 ----------- */
 
+
 /* Portrait and Landscape */
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
     .logo {
         margin-top: 50px;
     }
-
     .footer {
         height: 630px;
     }
-    .footerImgFooter{
-      margin-top: 190px;
+    .footerImgFooter {
+        margin-top: 190px;
     }
 }
+
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .logo {
-      margin-top: 20px;
-  }
+    .logo {
+        margin-top: 20px;
+    }
 }
 
+
 /*------ Large Screen -------*/
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
     .logo {
         margin-top: 350px;
     }
-
     .footer {
         height: 630px;
     }
 }
+
 @media screen and (min-device-width: 1400px) and (max-device-width: 1800px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .footer{
-    height: 400px;
-  }
+    .footer {
+        height: 400px;
+    }
 }

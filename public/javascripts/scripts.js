@@ -16,6 +16,10 @@ $(document).ready(() => {
             error: () => {}
         })
     })
+    // toggle edit plant
+    $('.editBtn').click(() => {
+      $('.editForm').toggleClass('hidden')
+    })
     // toggle to add new plant
     $('#createPlantBtnDemo').click(() => {
         $('.createForm').toggleClass('hidden')
