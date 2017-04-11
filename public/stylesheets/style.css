@@ -6,7 +6,6 @@
 html {
     height: 100%;
     background-color: #d2f4fa;
-    position: absolute;
 }
 
 body {
@@ -139,7 +138,7 @@ input {
 .footer {
     margin-top: 60px;
     background-color: rgb(128, 177, 55);
-    height: 0px;
+    height: 200px;
 }
 .footerImg {
     float: left;
