@@ -2,9 +2,9 @@
 </div>
 <div class="container-fluid text-center">
     <h1 class='demologo profile'>Garden Name</h1>
-    <p class="randomQuote"></p>
-    <a href="/signup">Sign Up</a><br><br>
-    <button id="createPlantBtnDemo" type="button" name="button">Add New Plant</button><br>
+    <p class="randomQuote"></p><br>
+    <a href="/signup"><button class="hvr-grow-shadow signupDemoBtn" type="button" name="button">Sign Up</button></a><br><br>
+    <button id="createPlantBtnDemo" class=hvr-grow-shadow "" type="button" name="button">Add New Plant</button><br>
 </div><br>
 <div class="container-fluid text-center createForm hidden">
     <form class="" action="index.html" method="post">
@@ -16,87 +16,214 @@
     </form>
 </div>
 <div class="container-fluid" style="height: 500px;">
-    <div class="row">
-        <div class="col-xs-4">
-            <canvas id="doughnutChartDemo" width="400" height="400"></canvas>
+    <div class="container" style="height: 500px;">
+        <div class="row">
+            <div class="col-xs-6 numberOfPlants">
+                <h4>Total # Of Plants: <h3>32</h3></h4>
+            </div>
+            <div class="col-xs-6 myMostCommon">
+                <h4>My Most Common Plants: </h4><br>
+                <h6>Basil, Apple Trees, Spinach</h6>
+            </div>
         </div>
-        <div class="col-xs-4 text-center">
-            <div class="col numberOfPlants">
-              <h1>Total # Of Plants: </h1><br>
-              <h1>62</h1>
-            </div><br>
-            <div class="col myMostCommon">
-              <h1>My Most Common Plants: </h1><br>
-              <h1>Apple, Herbs, Spinach</h1>
+        <div class="row">
+            <div class="col-xs-12">
+                <canvas id="doughnutChartDemo" width="400" height="150"></canvas><br><br>
+            </div>
+        </div>
+    </div><br>
+    <div class="text-center container">
+      <h1>My Garden</h1>
+    </div>
+    <div class="container" style="margin-top: 40px">
+        <div class="panel panel-default clicable row col-md-4 col-xs-5 col-md-offset-4 col-xs-offset-3">
+            <div class="panel-body">
+                <div class="top-img">
+                    <img class="top-img" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg">
+                </div>
+                <div class="top-content">
+                    <div class="question">
+                        <p class="x-large"><b>Basil | Ocimum basilicum</b></p>
+                    </div>
+                    <div class="made-by">
+                        <p class="text-muted">
+                            <b class="cool-font">
+                                <span>Basil, is a short lived annual or perennial plant in the family Lamiaceae grown for its leaves which are used as a herb. ... Close-up of basil flowers.</span>
+                            </b>
+                        </p>
+                    </div><br>
+                    <div class="price">
+                        <p class="text-center xx-large avg">
+                            <b><a href="/demo"><button class="hvr-grow-shadow gardenView" type="button" name="button">View Test's garden!</button></a><br></b>
+                            <span class="currency"><i class="fa fa-eur"></i></span>
+                            <button class="btn btn-danger" type="button" name="">Delete plant</button>
+                        </p>
+                    </div><br>
+                    <hr>
+                    <div class="extra-info text-muted">
+                        <div class="pull-right">Updated: 12/25/2016</div>
+                    </div><br>
+                </div>
             </div>
         </div>
     </div>
-
-</div>
-<div class="container text-center">
-    <h1>My Garden</h1>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <img id="plantImg" class="card-img-top" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg" alt="Card image cap"><br>
-                <div class="card-block">
-                    <h4 class="card-title">Common Name{{common_name}}</h4>
-                    <p class="card-text">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description
-                        Description Description Description Description Description Description Description Description{{description}}</p>
+    <div class="container" style="margin-top: 40px">
+        <div class="panel panel-default clicable row col-md-4 col-xs-5 col-md-offset-4 col-xs-offset-3">
+            <div class="panel-body">
+                <div class="top-img">
+                    <img class="top-img" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg">
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
-                    <li class="list-group-item">Date Added: {{date_added}}</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card">
-                <img id="plantImg" class="card-img-top" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg" alt="Card image cap"><br>
-                <div class="card-block">
-                    <h4 class="card-title">{{common_name}}</h4>
-                    <p class="card-text">{{description}}</p>
+                <div class="top-content">
+                    <div class="question">
+                        <p class="x-large"><b>Basil | Ocimum basilicum</b></p>
+                    </div>
+                    <div class="made-by">
+                        <p class="text-muted">
+                            <b class="cool-font">
+                              <span>Basil, is a short lived annual or perennial plant in the family Lamiaceae grown for its leaves which are used as a herb. ... Close-up of basil flowers.</span>
+                          </b>
+                        </p>
+                    </div><br>
+                    <div class="price">
+                        <p class="text-center xx-large avg">
+                            <b><a href="/demo"><button class="hvr-grow-shadow gardenView" type="button" name="button">View Test's garden!</button></a><br></b>
+                            <span class="currency"><i class="fa fa-eur"></i></span>
+                            <button class="btn btn-danger" type="button" name="">Delete plant</button>
+                        </p>
+                    </div><br>
+                    <hr>
+                    <div class="extra-info text-muted">
+                        <div class="pull-right">Updated: 12/25/2016</div>
+                    </div><br>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
-                    <li class="list-group-item">Date Added: {{date_added}}</li>
-                </ul>
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <img id="plantImg" class="card-img-top" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg" alt="Card image cap"><br>
-                <div class="card-block">
-                    <h4 class="card-title">{{common_name}}</h4>
-                    <p class="card-text">{{description}}</p>
+    <div class="container" style="margin-top: 40px">
+        <div class="panel panel-default clicable row col-md-4 col-xs-5 col-md-offset-4 col-xs-offset-3">
+            <div class="panel-body">
+                <div class="top-img">
+                    <img class="top-img" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg">
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
-                    <li class="list-group-item">Date Added: {{date_added}}</li>
-                </ul>
+                <div class="top-content">
+                    <div class="question">
+                        <p class="x-large"><b>Basil | Ocimum basilicum</b></p>
+                    </div>
+                    <div class="made-by">
+                        <p class="text-muted">
+                            <b class="cool-font">
+                            <span>Basil, is a short lived annual or perennial plant in the family Lamiaceae grown for its leaves which are used as a herb. ... Close-up of basil flowers.</span>
+                        </b>
+                        </p>
+                    </div><br>
+                    <div class="price">
+                        <p class="text-center xx-large avg">
+                            <b><a href="/demo"><button class="hvr-grow-shadow gardenView" type="button" name="button">View Test's garden!</button></a><br></b>
+                            <span class="currency"><i class="fa fa-eur"></i></span>
+                            <button class="btn btn-danger" type="button" name="">Delete plant</button>
+                        </p>
+                    </div><br>
+                    <hr>
+                    <div class="extra-info text-muted">
+                        <div class="pull-right">Updated: 12/25/2016</div>
+                    </div><br>
+                </div>
             </div>
         </div>
-
-        <div class="col-md-6">
-            <div class="card">
-                <img id="plantImg" class="card-img-top" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg" alt="Card image cap"><br>
-                <div class="card-block">
-                    <h4 class="card-title">{{common_name}}</h4>
-                    <p class="card-text">{{description}}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Scientific Name: {{scientific_name}}</li>
-                    <li class="list-group-item">Date Added: {{date_added}}</li>
-                </ul>
-            </div>
-        </div>
-
     </div>
-</div>
-<!-- BACKGROUND IMG -->
-<img class="footerImg" src="http://i.imgur.com/fF54ty8.png" alt="">
-<!-- FOOTER GRASS DIV-->
+    <div class="container" style="margin-top: 40px">
+        <div class="panel panel-default clicable row col-md-4 col-xs-5 col-md-offset-4 col-xs-offset-3">
+            <div class="panel-body">
+                <div class="top-img">
+                    <img class="top-img" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg">
+                </div>
+                <div class="top-content">
+                    <div class="question">
+                        <p class="x-large"><b>Basil | Ocimum basilicum</b></p>
+                    </div>
+                    <div class="made-by">
+                        <p class="text-muted">
+                            <b class="cool-font">
+                          <span>Basil, is a short lived annual or perennial plant in the family Lamiaceae grown for its leaves which are used as a herb. ... Close-up of basil flowers.</span>
+                      </b>
+                        </p>
+                    </div><br>
+                    <div class="price">
+                        <p class="text-center xx-large avg">
+                            <b><a href="/demo"><button class="hvr-grow-shadow gardenView" type="button" name="button">View Test's garden!</button></a><br></b>
+                            <span class="currency"><i class="fa fa-eur"></i></span>
+                            <button class="btn btn-danger" type="button" name="">Delete plant</button>
+                        </p>
+                    </div><br>
+                    <hr>
+                    <div class="extra-info text-muted">
+                        <div class="pull-right">Updated: 12/25/2016</div>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 40px">
+        <div class="panel panel-default clicable row col-md-4 col-xs-5 col-md-offset-4 col-xs-offset-3">
+            <div class="panel-body">
+                <div class="top-img">
+                    <img class="top-img" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg">
+                </div>
+                <div class="top-content">
+                    <div class="question">
+                        <p class="x-large"><b>Basil | Ocimum basilicum</b></p>
+                    </div>
+                    <div class="made-by">
+                        <p class="text-muted">
+                            <b class="cool-font">
+                        <span>Basil, is a short lived annual or perennial plant in the family Lamiaceae grown for its leaves which are used as a herb. ... Close-up of basil flowers.</span>
+                    </b>
+                        </p>
+                    </div><br>
+                    <div class="price">
+                        <p class="text-center xx-large avg">
+                            <b><a href="/demo"><button class="hvr-grow-shadow gardenView" type="button" name="button">View Test's garden!</button></a><br></b>
+                            <span class="currency"><i class="fa fa-eur"></i></span>
+                            <button class="btn btn-danger" type="button" name="">Delete plant</button>
+                        </p>
+                    </div><br>
+                    <hr>
+                    <div class="extra-info text-muted">
+                        <div class="pull-right">Updated: 12/25/2016</div>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 40px">
+        <div class="panel panel-default clicable row col-md-4 col-xs-5 col-md-offset-4 col-xs-offset-3">
+            <div class="panel-body">
+                <div class="top-img">
+                    <img class="top-img" src="https://www.colourbox.com/preview/2090330-genovese-basil-plant-ocimum-basilicum-sweet-basil.jpg">
+                </div>
+                <div class="top-content">
+                    <div class="question">
+                        <p class="x-large"><b>Basil | Ocimum basilicum</b></p>
+                    </div>
+                    <div class="made-by">
+                        <p class="text-muted">
+                            <b class="cool-font">
+                                <span>Basil, is a short lived annual or perennial plant in the family Lamiaceae grown for its leaves which are used as a herb. ... Close-up of basil flowers.</span>
+                            </b>
+                        </p>
+                    </div><br>
+                    <div class="price">
+                        <p class="text-center xx-large avg">
+                            <b><a href="/demo"><button class="hvr-grow-shadow gardenView" type="button" name="button">View Test's garden!</button></a><br></b>
+                            <span class="currency"><i class="fa fa-eur"></i></span>
+                            <button class="btn btn-danger" type="button" name="">Delete plant</button>
+                        </p>
+                    </div><br>
+                    <hr>
+                    <div class="extra-info text-muted">
+                        <div class="pull-right">Updated: 12/25/2016</div>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+    </div>
