@@ -2,7 +2,7 @@
 </div>
 <div class="container-fluid text-center">
     <h1 class='demologo profile'>Your Garden: {{gardenName}}</h1>
-    <pclass="randomQuote"></p>
+    <pclass="randomQuote"></p><br>
     <a href="/feed"><button class="hvr-grow-shadow feedBtn" type="button" name="button">Feed</button></a><br><br>
     <button class="hvr-grow-shadow" id="createPlantBtn" type="button" name="button">Add New Plant</button><br>
 </div><br>
@@ -59,8 +59,7 @@
             <div class="price">
               <p class="text-center xx-large avg">
                 <!-- <b><a href="/feed/{{this.id}}"><button class="hvr-grow-shadow gardenView" type="button" name="button">View {{this.garden_name}}'s garden!</button></a><br></b> -->
-                <span class="currency"><i class="fa fa-eur"></i></span>
-                <button class="btn btn-danger" type="button" name="">Delete plant</button>
+                <button class="btn btn-danger delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
               </p>
             </div><br>
             <hr>

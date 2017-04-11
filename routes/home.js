@@ -35,7 +35,6 @@ router.get('/', function(req, res, next) {
           Promise.all([findUserPlants(user_id), countUserPlants(user_id), commonPlants(user_id)])
           .then(values => {
             let [userPlants, count, commonPlants] = values;
-            console.log(commonPlants[0].common_name)
             res.render('home', {
               gardenName: userPlants[0].garden_name,
               userPlants,
@@ -106,7 +105,7 @@ function findUserPlants(user_id) {
     .where('user_id', user_id)
     .join('users', 'users.id', 'user_plants.user_id')
     .join('plants', 'plants.id', 'user_plants.plant_id')
-    .select(['users.garden_name', 'plants.common_name', 'plants.scientific_name', 'user_plants.description', 'user_plants.photo', 'user_plants.created_at'])
+    .select(['users.garden_name', 'plants.common_name', 'plants.scientific_name', 'user_plants.description', 'user_plants.photo', 'user_plants.created_at', 'user_plants.plant_id'])
 }
 
 function commonPlants(user_id) {
@@ -131,4 +130,22 @@ function insertUserPlant() {
       res.redirect('/home');
     })
 }
+
+// del ajax
+router.delete('/', (req, res, next) => {
+  let id = req.body.id
+  let userId = 0;
+  jwt.verify(req.cookies.token, process.env.JWT_KEY, (err, payload) => {
+    if (payload) {
+      userId = payload.id;
+      knex('user_plants').del().where({
+        user_id: userId,
+        plant_id: id
+      }).debug(true).then(() => {
+        res.send(200)
+      })
+    }
+  })
+})
+
 module.exports = router;

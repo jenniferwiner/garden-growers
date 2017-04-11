@@ -4,11 +4,7 @@ $(document).ready(() => {
   var myDoughnutChart = new Chart(ctd, {
       type: 'doughnut',
       data: {
-        labels: [
-            "Evergreen",
-            "Fruit",
-            "Veggies",
-        ],
+        labels: ["Evergreen", "Fruit", "Veggies"],
         datasets: [
             {
                 data: [1, 1, 15],
