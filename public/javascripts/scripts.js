@@ -19,7 +19,7 @@ $(document).ready(() => {
     // toggle edit plant
     $('.editBtn').click(() => {
       $('.editForm').toggleClass('hidden')
-
+    // update ajax call
     $('.editSubmit').click(() => {
         let id = $(event.target).attr('data-id')
         let common_name =
@@ -29,6 +29,7 @@ $(document).ready(() => {
             url: '/home',
             data: {
                 id: id
+
             },
             success: (data) => {
               if (data){

@@ -194,7 +194,7 @@ router.patch('/', function(req, res, next) {
         })
 
 })
-}
+
 
 // del ajax
 router.delete('/', (req, res, next) => {
