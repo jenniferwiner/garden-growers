@@ -20,12 +20,14 @@
   <div class="container" style="height: 500px;">
     <div class="row">
         <div class="col-xs-6 numberOfPlants">
-          <h4>Total # Of Plants: </h4><br>
+          <h4>Total # Of Plants: </h4>
           <h1>{{numberOfPlants}}</h1>
         </div>
         <div class="col-xs-6 myMostCommon">
-          <h4>My Most Common Plants: </h4><br>
-          <h1>{{mostCommonPlants}}</h1>
+          <h4>My Most Common Plants:</h4>
+          {{#each commonPlants}}
+          <h4>{{this.common_name}}: {{this.plant_count}}</h4>
+          {{/each}}
         </div>
     </div>
       <div class="row">
