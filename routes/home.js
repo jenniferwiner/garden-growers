@@ -213,29 +213,4 @@ router.delete('/', (req, res, next) => {
     })
 })
 
-router.patch('/', (req, res, next) => {
-    let scientific_name = firstCharUpper(req.body.scientific_name);
-    let common_name = firstCharUpper(req.body.common_name);
-    let plant_id = req.body.plant_id;
-    let user_id;
-    let photo = req.body.photo;
-    let description = req.body.description;
-    let plant_count = req.body.plant_count;
-
-    // verify token
-    jwt.verify(req.cookies.token, process.env.JWT_KEY, (err, payload) => {
-        if (payload) {
-            user_id = payload.id;
-        } else if (err) {
-            res.redirect('/home');
-        }
-    });
-    knex('user_plants')
-        .where({
-            'user_id': user_id,
-            'plant_id': plant_id
-        })
-        .returning()
-})
-
 module.exports = router;
