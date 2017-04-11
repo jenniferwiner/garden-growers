@@ -28,16 +28,29 @@ router.get('/', function(req, res, next) {
 
   function userPlants(user_id) {
     knex('user_plants')
-      .where({
-        'user_id': user_id
-      })
-      .innerJoin('users', 'users.id', 'user_plants.user_id')
-      .innerJoin('plants', 'plants.id', 'user_plants.plant_id')
-      .select(['users.garden_name', 'plants.common_name', 'plants.scientific_name', 'user_plants.description', 'user_plants.photo'])
-      .then((userPlants) => {
-        let gardenName = userPlants[0].garden_name
-        res.render('home', { gardenName, userPlants })
-      })
+      .where('user_id', user_id)
+      .then((data) => {
+        if (data.length === 0) {
+          knex('users')
+            .where('id', user_id)
+            .then(userData => {
+              res.render('home', {
+                gardenName: userData[0].garden_name
+              })
+            })
+        }
+        else {
+          knex('user_plants')
+            .where('user_id', user_id)
+            .join('users', 'users.id', 'user_plants.user_id')
+            .join('plants', 'plants.id', 'user_plants.plant_id')
+            .select(['users.garden_name', 'plants.common_name', 'plants.scientific_name', 'user_plants.description', 'user_plants.photo'])
+            .then((userPlants) => {
+              let gardenName = userPlants[0].garden_name;
+              res.render('home', { gardenName, userPlants });
+            });
+        }
+      });
   }
 });
 
@@ -54,10 +67,16 @@ router.post('/', function(req, res, next) {
   // insert plant function
   function insertUserPlant() {
     knex('user_plants')
-    .insert({ user_id, plant_id, photo, description, plant_count })
-    .then(() => {
-      res.redirect('/home');
-    })
+      .insert({
+        user_id,
+        plant_id,
+        photo,
+        description,
+        plant_count
+      })
+      .then(() => {
+        res.redirect('/home');
+      })
   }
 
   // verify token
@@ -76,11 +95,14 @@ router.post('/', function(req, res, next) {
     .then(searchedPlant => {
       if (searchedPlant.length === 0) {
         knex('plants')
-        .insert({ common_name, scientific_name }, '*')
-        .then(insertedPlant => {
-          plant_id = insertedPlant[0].id;
-          insertUserPlant();
-        });
+          .insert({
+            common_name,
+            scientific_name
+          }, '*')
+          .then(insertedPlant => {
+            plant_id = insertedPlant[0].id;
+            insertUserPlant();
+          });
       }
       else {
         plant_id = searchedPlant[0].id;
