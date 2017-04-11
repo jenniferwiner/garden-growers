@@ -4,6 +4,7 @@ $(document).ready(() => {
   var myDoughnutChartDemo = new Chart(ctdDemo, {
     type: 'doughnut',
     data: {
+
       labels: ["Evergreen", "Fruit", "Veggies"],
       datasets: [
       {
@@ -23,6 +24,7 @@ $(document).ready(() => {
       }]
     }
   });
+
 
   $.ajax({
     method: 'GET',
@@ -59,4 +61,4 @@ $(document).ready(() => {
       console.log("Error: ", err);
     }
   });
-})
+});
