@@ -47,6 +47,14 @@ router.get('/', function(req, res, next) {
   }
 });
 
+router.get('/labelsAndData', function(req, res, next) {
+  res.set('Content-Type', 'application/json');
+  res.send({
+    data: [9, 9, 9],
+    labels: ['Jen', 'Is', 'Awesome!']
+  });
+});
+
 router.post('/', function(req, res, next) {
   // setting variables for knex insert
   let scientific_name = firstCharUpper(req.body.scientific_name);
