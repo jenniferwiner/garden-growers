@@ -16,30 +16,49 @@
         <button class="hvr-grow-shadow" id="submitCreateBtn" type="submit" name="">Submit New Plant</button>
     </form>
 </div>
-<div class="container-fluid" style="height: 500px;">
-  <div class="container" style="height: 500px;">
-    <div class="row">
-        <div class="col-xs-6 numberOfPlants">
-          <h4>Total # Of Plants: </h4>
-          <h1>{{numberOfPlants}}</h1>
-        </div>
-        <div class="col-xs-6 myMostCommon">
-          <h4>My Most Common Plants:</h4>
-          {{#each commonPlants}}
-          <h4>{{this.common_name}}: {{this.plant_count}}</h4>
-          {{/each}}
-        </div>
-    </div>
-      <div class="row">
-          <div class="col-xs-12">
-              <canvas id="doughnutChartHome" width="400" height="150"></canvas>
-          </div>
-        </div>
-    </div>
 
+<div class="container text-center">
+  <div class="right">
+    <div class="panelCard panel-default clicable noteCard">
+        <div class="panel-body">
+            <div class="top-content">
+                <div class="question">
+                    <p class="x-large"><b>
+                      <h4>Total # Of Plants: </h4>
+                      <h1>{{numberOfPlants}}</h1>
+                    </b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="left">
+    <div class="panelCard panel-default clicable noteCard">
+        <div class="panel-body">
+            <div class="top-content">
+                <div class="question">
+                    <p class="x-large">
+                      <b>
+                        <h4>My Most Common Plants:</h4>
+                        {{#each commonPlants}}
+                        <h4>{{this.common_name}}: {{this.plant_count}}</h4>
+                        {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
 </div>
+<div class="row">
+    <div class="col-xs-12">
+        <canvas id="doughnutChartHome" width="400" height="150"></canvas><br><br>
+    </div>
+</div>
+
+
 {{#each userPlants}}
-<div class="container" style="margin-top: 40px">
+<div class="container text-center" style="margin-top: 40px">
+  <h1>{{this.garden_name}}</h1>
   <div class="panel panel-default clicable row col-md-4 col-xs-5 col-md-offset-4 col-xs-offset-3">
     <div class="panel-body">
         <div class="top-img">
@@ -60,6 +79,8 @@
               <p class="text-center xx-large avg">
                 <!-- <b><a href="/feed/{{this.id}}"><button class="hvr-grow-shadow gardenView" type="button" name="button">View {{this.garden_name}}'s garden!</button></a><br></b> -->
                 <button class="btn btn-danger delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
+                <button class="btn btn-info editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
+
               </p>
             </div><br>
             <hr>
@@ -69,6 +90,16 @@
         </div>
     </div>
 </div>
+</div>
+<div class="container-fluid text-center editForm hidden">
+    <form class="" action="/home" method="patch">
+        <input type="text" name="common_name" value="" placeholder=" Common Name"><br>
+        <input type="text" name="scientific_name" value="" placeholder=" Scientic Name"><br>
+        <input type="text" name="description" value="" placeholder=" Description"><br>
+        <input type="text" name="plant_count" value="" placeholder=" Number of plants being planted"><br>
+        <input type="text" name="photo" value="" placeholder=" Add Plant Photo"><br>
+        <button class="hvr-grow-shadow" id="editSubmit" type="submit" name="">Submit Updates</button>
+    </form>
 </div>
 {{/each}}
 <!-- BACKGROUND IMG -->
