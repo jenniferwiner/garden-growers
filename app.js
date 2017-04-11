@@ -11,6 +11,7 @@ var signup = require('./routes/signup');
 var home = require('./routes/home');
 var feed = require('./routes/feed');
 var users = require('./routes/users');
+// var zip = require('./routes/zipcode')
 
 var app = express();
 require('dotenv').config()
