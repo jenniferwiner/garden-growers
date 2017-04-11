@@ -16,9 +16,30 @@ $(document).ready(() => {
             error: () => {}
         })
     })
+<<<<<<< HEAD
     // toggle edit plant
     $('.editBtn').click(() => {
       $('.editForm').toggleClass('hidden')
+=======
+
+    $('.editSubmit').click(() => {
+        let id = $(event.target).attr('data-id')
+        let common_name =
+        let 
+        $.ajax({
+            method: 'PATCH',
+            url: '/home',
+            data: {
+                id: id
+            },
+            success: (data) => {
+              if (data){
+                location.reload()
+              }
+            },
+            error: () => {}
+        })
+>>>>>>> new patch start
     })
     // toggle to add new plant
     $('#createPlantBtnDemo').click(() => {
