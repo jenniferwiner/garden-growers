@@ -48,6 +48,44 @@ router.get('/', function(req, res, next) {
     }
 });
 
+router.get('/labelsAndData', function(req, res, next) {
+  function userPlantforGraph(user_id) {
+    knex('user_plants')
+    .join('plants', 'user_plants.plant_id', '=', 'plants.id')
+    .where('user_plants.user_id', user_id)
+    .select('plants.common_name', 'plant_count')
+    .then((data) => {
+      let chartData = data.map(plant => {
+        return plant.plant_count;
+      });
+      let chartLabels = data.map(plant => {
+        return plant.common_name;
+      });
+      res.set('Content-Type', 'application/json');
+      res.send({
+        data: chartData,
+        labels: chartLabels
+      });
+    })
+    .catch((err) => {
+      res.status(404);
+      res.send("Couldn't find UserId");
+    });
+  }
+
+  let user_id;
+
+  jwt.verify(req.cookies.token, process.env.JWT_KEY, (err, payload) => {
+    if (payload) {
+      user_id = payload.id;
+      userPlantforGraph(user_id);
+    }
+    else if (err) {
+      res.redirect('/');
+    }
+  });
+});
+
 router.post('/', function(req, res, next) {
     // setting variables for knex insert
     let scientific_name = firstCharUpper(req.body.scientific_name);
