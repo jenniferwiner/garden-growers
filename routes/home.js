@@ -163,6 +163,7 @@ router.patch('/', function(req, res, next) {
         .where('user_plants.id', user_plant_id)
         .update({ photo, description, plant_count })
         .then((data) => {
+          console.log('here!!', knex.fn.now().sql)
           res.sendStatus(200)
         })
     } else if (err) {

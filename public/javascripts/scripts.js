@@ -18,10 +18,7 @@ $(document).ready(() => {
       }
     })
   })
-  // toggle edit plant
-  $('.editBtn').click(() => {
-    $('.editForm').toggleClass('hidden')
-  })
+
   // toggle to add new plant
   $('#createPlantBtnDemo').click(() => {
     $('.createForm').toggleClass('hidden')
@@ -81,6 +78,7 @@ $(document).ready(() => {
       weatherObj.vis.us = obs.visibility_mi
       weatherObj.forecast.us = obs.weather
       weatherObj.pressure.us = obs.pressure_in
+
       function us() {
         $('#header-icon').append('<img src=' + weatherObj.icon.us + '>')
         $('#forecast').append('<h4>' + weatherObj.forecast.us + '</h4>')
@@ -95,6 +93,7 @@ $(document).ready(() => {
         $('#gust').append('<h4>' + weatherObj.windGust.us + ' mph</h4>')
       }
       us()
+
       function eu() {
         $('#header-icon').append('Conditions <img src=' + weatherObj.icon.eu + '>')
         $('#forecast').append('<h4>' + weatherObj.forecast.eu + '</h4>')
@@ -138,28 +137,34 @@ $(document).ready(() => {
 
   // toggle edit plant
   $('.editBtn').click(() => {
-    $('.panel').toggleClass('panelheight')
-    $('.editBtn').removeClass('hidden')
-  })
+    let editId = $(event.target).attr('id')
+    $(`#form_${editId}`).toggleClass('hidden')
+    $(`#panel_${editId}`).toggleClass('panelheight')
 
-  $('#editSubmit').click(() => {
-    let user_plant_id = $(event.target).attr('data-id')
-    let description = $('#edit_description').val()
-    let plant_count = $('#edit_plant_count').val()
-    let photo = $('#edit_photo').val()
+    $(`#submit_${editId}`).click(() => {
+      let user_plant_id = $(event.target).attr('data-id')
+      let description = $(`#description_${editId}`).val()
+      let plant_count = $(`#plant_count_${editId}`).val()
+      let photo = $(`#photo_${editId}`).val()
 
-    $.ajax({
-      method: 'PATCH',
-      url: '/home',
-      data: { user_plant_id, description, plant_count, photo },
-      success: (data) => {
-        if (data) {
-          location.reload()
+      $.ajax({
+        method: 'PATCH',
+        url: '/home',
+        data: {
+          user_plant_id,
+          description,
+          plant_count,
+          photo
+        },
+        success: (data) => {
+          if (data) {
+            location.reload()
+          }
+        },
+        error: (err) => {
+          console.log('Error: ', err)
         }
-      },
-      error: (err) => {
-        console.log('Error: ', err)
-      }
+      })
     })
   })
 
