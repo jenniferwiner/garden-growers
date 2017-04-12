@@ -79,7 +79,7 @@ input {
 
 /*login button*/
 
-#loginBtn, #createPlantBtn, #submitCreateBtnDemo, #createPlantBtnDemo, #submitCreateBtn, .feedBtn, .homeBtn, .gardenView, .signupDemoBtn {
+#loginBtn, #createPlantBtn, #submitCreateBtnDemo, #createPlantBtnDemo, #submitCreateBtn, .feedBtn, .homeBtn, .gardenView, .signupDemoBtn, #logoutBtn {
     width: 350px;
     height: 30px;
     background-color: #DDD1B5;

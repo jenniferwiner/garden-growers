@@ -4,6 +4,12 @@ const knex = require('../knex')
 const boom = require('boom')
 const jwt = require('jsonwebtoken')
 
+// Logout
+router.get('/logout', function(req, res, next) {
+  res.clearCookie('token')
+  res.redirect('/')
+})
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   let user_id

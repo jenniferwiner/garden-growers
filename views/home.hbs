@@ -16,7 +16,9 @@
     <h1 class='demologo profile'>{{gardenName}}</h1>
     <pclass="randomQuote"></p><br>
     <a href="/feed"><button class="hvr-grow-shadow feedBtn" type="button" name="button">Feed</button></a><br><br>
-    <button class="hvr-grow-shadow" id="createPlantBtn" type="button" name="button">Add New Plant</button><br>
+    <a href="/home/logout"><button class="hvr-grow-shadow" id="logoutBtn" type="button" name="button">Log out</button><br></a>
+    <button class="hvr-grow-shadow" id="createPlantBtn" type="button" name="button">Add New Plant</button><br><br>
+
 </div><br>
 <div class="container-fluid text-center createForm hidden">
     <form class="" action="/home" method="post">
@@ -66,7 +68,7 @@
     </div>
 </div>
 {{#each userPlants}}
-<div class="container text-center" style="margin-top: 40px">
+<div class="text-center" style="margin-top: 40px">
   <!-- <div class="row"> -->
     <div class="col-md-6">
       <div class="panel panel-default clicable">
@@ -103,16 +105,9 @@
                     </div>
                 </div>
             </div><br>
-        <!-- </div> -->
+        </div>
       </div>
     </div>
-</div>
+  </div>
 </div>
 {{/each}}
-<!-- BACKGROUND IMG -->
-<!-- <div class="container-fluid">
-  <img class="footerImg" src="http://i.imgur.com/fF54ty8.png" alt="">
-</div> -->
-<!-- FOOTER GRASS DIV-->
-<!-- <div class="container-fluid footer">
-</div> -->
