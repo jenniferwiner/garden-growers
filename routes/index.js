@@ -28,12 +28,17 @@ router.post('/', ev(validations.post), (req, res, next) => {
           let token = jwt.sign({
             exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 30),
             garden_name: data[0].gardenName,
-            id: data[0].id
+            id: data[0].id,
+            is_admin: data[0].is_admin
           }, process.env.JWT_KEY)
           res.cookie('token', token, {
             httpOnly: true
           })
-          res.redirect('/home')
+          if (data[0].is_admin === false) {
+            res.redirect('/home')
+          } else if (data[0].is_admin === true) {
+            res.redirect('/admin')
+          }
         } else {
           next(boom.create(400, 'Bad garden name or password'))
         }

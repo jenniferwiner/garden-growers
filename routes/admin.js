@@ -13,7 +13,8 @@ router.get('/', function(req, res, next) {
   jwt.verify(req.cookies.token, process.env.JWT_KEY, (err, payload) => {
     if (payload) {
       let user_id = payload.id
-      if (user_id === 3) {
+      let is_admin = payload.is_admin
+      if (is_admin === true) {
         knex('users')
           .select(['name', 'garden_name', 'email', 'zipcode', 'id'])
           .then((data) => {
