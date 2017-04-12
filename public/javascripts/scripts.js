@@ -42,7 +42,6 @@ $(document).ready(() => {
     datatype: 'json',
     success: function(data) {
       let weatherInfo = data
-      console.log(weatherInfo)
       // Filling the weather object
       let weatherObj = {
         humidity: {},
@@ -153,6 +152,25 @@ $(document).ready(() => {
       method: 'PATCH',
       url: '/home',
       data: { user_plant_id, description, plant_count, photo },
+      success: (data) => {
+        if (data) {
+          location.reload()
+        }
+      },
+      error: (err) => {
+        console.log('Error: ', err)
+      }
+    })
+  })
+
+  $('.deleteUser').click(() => {
+    let id = $(event.target).attr('data-id')
+    $.ajax({
+      method: 'DELETE',
+      url: '/admin',
+      data: {
+        id: id
+      },
       success: (data) => {
         if (data) {
           location.reload()

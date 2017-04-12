@@ -17,7 +17,6 @@ router.get('/', function(req, res, next) {
         knex('users')
           .select(['name', 'garden_name', 'email', 'zipcode', 'id'])
           .then((data) => {
-            console.log(data)
             res.render('admin', { users: data })
           })
       } else {
@@ -26,6 +25,17 @@ router.get('/', function(req, res, next) {
     } else if (err) {
       res.redirect('/')
     }
+  })
+})
+
+router.delete('/', function(req, res, next) {
+  let id = req.body.id
+
+  knex('users')
+  .where('id', id)
+  .del()
+  .then(() => {
+    res.sendStatus(200)
   })
 })
 
