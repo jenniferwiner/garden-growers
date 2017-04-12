@@ -1,3 +1,9 @@
+<head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="166972435135-65arujphp715q8pcd62sb7d8j44t25mr.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
 <script type="text/javascript">
   var userZipCode = {{zip}};
 </script>
@@ -18,6 +24,16 @@
     <a href="/feed"><button class="hvr-grow-shadow feedBtn" type="button" name="button">Feed</button></a><br><br>
     <a href="/home/logout"><button class="hvr-grow-shadow" id="logoutBtn" type="button" name="button">Log out</button><br><br></a>
     <button class="hvr-grow-shadow" id="createPlantBtn" type="button" name="button">Add New Plant</button><br><br>
+
+    <a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
 
 </div><br>
 <div class="container-fluid text-center createForm hidden">
