@@ -1,7 +1,7 @@
 <div class="sun">
 </div>
 <div class="container-fluid text-center">
-    <h1 class='demologo profile'>{{gardenName}}</h1>
+    <h1 class='demologo profile'>Garden Profile: {{gardenName}}</h1>
     <p class="randomQuote"></p><br>
     <a href="/feed"><button class="hvr-grow-shadow feedBtn" type="button" name="button">Feed</button></a><br><br>
     <a href="/home"><button class="hvr-grow-shadow homeBtn" type="button" name="button">Home</button></a><br><br>
@@ -9,11 +9,13 @@
 <div class="container" style="height: 500px;">
   <div class="row">
       <div class="col-xs-6 myMostCommon">
-        <h4>My Most Common Plants: </h4><br>
-        <h1>{{mostCommonPlants}}</h1>
+        <h4>Most Common Plants: </h4>
+        {{#each commonPlants}}
+        <h4>{{this.common_name}}: {{this.plant_count}}</h4>
+        {{/each}}
       </div>
       <div class="col-xs-6 numberOfPlants">
-        <h4>Number of Plant Types: </h4><br>
+        <h4>Number of Plant Types: </h4>
         <h1>{{numberOfPlants}}</h1>
       </div>
   </div>
@@ -44,13 +46,13 @@
               </div><br>
               <div class="price">
                 <p class="text-center xx-large avg">
-                  <b><a href="/feed/{{this.id}}"><button class="hvr-grow-shadow gardenView" type="button" name="button">View {{this.garden_name}}'s garden!</button></a><br></b>
-                  <span class="currency"><i class="fa fa-eur"></i></span>
+                  <!-- <b><a href="/feed/{{this.id}}"><button class="hvr-grow-shadow gardenView" type="button" name="button">View {{this.garden_name}}'s garden!</button></a><br></b>
+                  <span class="currency"><i class="fa fa-eur"></i></span> -->
                 </p>
               </div><br>
               <hr>
               <div class="extra-info text-muted">
-                  <div class="pull-right">Updated: {{this.created_at}}</div>
+                  <div class="pull-right">Updated: {{this.updated_at}}</div>
               </div>
           </div>
       </div>
