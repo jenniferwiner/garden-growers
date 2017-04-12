@@ -3,6 +3,11 @@
     <meta name="google-signin-client_id" content="166972435135-65arujphp715q8pcd62sb7d8j44t25mr.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
+<div class="container-fluid googlesignin">
+  <div class="col-md-3">
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
+  </div>
+</div>
 <div class="sun">
 </div>
 <!-- BIRD -->
@@ -78,7 +83,6 @@
             <input type="password" name="password" value="" placeholder=" Password"><br><br>
             <button class="hvr-bubble-top" id="loginBtn" type="submit" name="" value="">Login</button>
         </form>
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
         <script>
             function onSignIn(googleUser) {
                 // Useful data for your client-side scripts:
@@ -107,8 +111,9 @@
         <a href="/demo">Preview a user's dashboard</a>
     </div>
 </div>
+<footer>
 <!-- BACKGROUND IMG -->
-<img class="footerImg" src="http://i.imgur.com/fF54ty8.png" alt=""><br>
+  <img class="footerImg" src="http://i.imgur.com/fF54ty8.png" alt=""><br>
 <!-- FOOTER GRASS DIV-->
-<div class="container-fluid footer">
-</div>
+  <div class="container-fluid footer"></div>
+</footer>
