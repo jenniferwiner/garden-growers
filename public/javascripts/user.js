@@ -1,7 +1,9 @@
 $(document).ready(() => {
+  let id = $('#gardenHeader').attr('data-id')
+
   $.ajax({
     method: 'GET',
-    url: '/feed/:id/labelsAndData',
+    url: `/feed/${id}/labelsAndData`,
     success: function(data) {
       let chartData = data.data
       let chartLabels = data.labels
