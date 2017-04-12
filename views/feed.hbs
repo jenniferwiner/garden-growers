@@ -23,41 +23,31 @@
   </svg>
 </div>
 {{#each feedData}}
-<div class="container" style="margin-top: 40px">
-  <div class="panel panel-default clicable row col-md-4 col-xs-5 col-md-offset-4 col-xs-offset-3">
-    <div class="panel-body">
-        <div class="top-img">
+<div class="text-center" style="margin-top: 40px">
+    <div class="col-md-6">
+      <div class="panel panel-default clicable">
+        <div class="panel-body">
+          <div class="top-img">
             <img class="top-img" src="{{this.photo}}">
-        </div>
+          </div>
         <div class="top-content">
             <div class="question">
                 <p class="x-large"><b>{{this.common_name}} | {{this.scientific_name}}</b></p>
             </div>
-            <div class="made-by">
-                <p class="text-muted">
-                    <b class="cool-font">
-                        <span>{{this.description}}</span>
-                    </b>
-                </p>
-            </div><br>
-            <div class="price">
-              <p class="text-center xx-large avg">
-                <b><a href="/feed/{{this.id}}"><button class="hvr-grow-shadow gardenView" type="button" name="button">View {{this.garden_name}}'s garden!</button></a><br></b>
-                <span class="currency"><i class="fa fa-eur"></i></span>
-              </p>
-            </div><br>
-            <hr>
-            <div class="extra-info text-muted">
-                <div class="pull-right">Updated: {{this.created_at}}</div>
-            </div>
+        <div class="made-by">
+            <p class="text-muted">
+                <b class="cool-font">
+                    <span>{{this.description}}</span>
+                </b>
+            </p>
+        </div><br>
+        <p class="text-center xx-large avg">
+          <b><a href="/feed/{{this.id}}"><button class="hvr-grow-shadow gardenView" type="button" name="button">View {{this.garden_name}}'s garden!</button></a><br></b>
+          <span class="currency"><i class="fa fa-eur"></i></span>
+        </p>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </div>
 {{/each}}
-
-<!-- BACKGROUND IMG -->
-<img class="footerImgFooter" src="http://i.imgur.com/fF54ty8.png" alt=""><br>
-<!-- FOOTER GRASS DIV-->
-<!-- <div class="container-fluid footerFeed">
-</div> -->

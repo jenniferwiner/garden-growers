@@ -43,38 +43,40 @@
       </div>
     </div>
   </div>
-
   {{#each gardenData}}
-  <div class="container" style="margin-top: 40px">
-    <div class="panel panel-default clicable row col-md-4 col-xs-5 col-md-offset-4 col-xs-offset-3">
-      <div class="panel-body">
-          <div class="top-img">
+  <div class="text-center" style="margin-top: 40px">
+        <div class="col-md-6">
+        <div class="panel panel-default clicable">
+          <div class="panel-body">
+            <div class="top-img">
               <img class="top-img" src="{{this.photo}}">
-          </div>
+            </div>
           <div class="top-content">
               <div class="question">
                   <p class="x-large"><b>{{this.common_name}} | {{this.scientific_name}}</b></p>
               </div>
-              <div class="made-by">
-                  <p class="text-muted">
-                      <b class="cool-font">
-                          <span>{{this.description}}</span>
-                      </b>
-                  </p>
-              </div><br>
-              <div class="price">
-                <p class="text-center xx-large avg">
-                </p>
-              </div><br>
+          <div class="made-by">
+              <p class="text-muted">
+                  <b class="cool-font">
+                      <span>{{this.description}}</span>
+                  </b>
+              </p>
+          </div><br>
               <hr>
               <div class="extra-info text-muted">
-                  <div class="pull-right">Updated: {{this.updated_at}}</div>
+                  <div class="pull-right">Updated: {{this.updated_at}}</div><br>
+                  <div class="container-fluid text-center editForm hidden">
+                      <div>
+                          <input type="text" id="edit_description" value="{{this.description}}" placeholder=" Description"><br>
+                          <input type="text" id="edit_plant_count" value="{{this.plant_count}}" placeholder=" Number of plants being planted"><br>
+                          <input type="text" id="edit_photo" value="{{this.photo}}" placeholder="Add Plant Photo"><br>
+                          <button class="hvr-grow-shadow" id="editSubmit" type="submit" data-id={{this.id}}>Submit Updates</button>
+                      </div>
+                  </div>
+                </div><br>
               </div>
+            </div>
           </div>
+        </div>
       </div>
-    </div>
-  </div>
   {{/each}}
-<!-- BACKGROUND IMG -->
-<img class="footerImg" src="http://i.imgur.com/fF54ty8.png" alt="">
-<!-- FOOTER GRASS DIV-->
