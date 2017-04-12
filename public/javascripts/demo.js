@@ -7,10 +7,10 @@ $(document).ready(() => {
     type: 'doughnut',
     data: {
 
-      labels: ['Evergreen', 'Fruit', 'Veggies'],
+      labels: ['Dill', 'Basil', 'Apple tree', 'Sunflower'],
       datasets: [
         {
-          data: [1, 1, 15],
+          data: [3, 5, 12, 20],
           backgroundColor: [
             '#7E6551',
             '#A4AF69',

@@ -1,12 +1,12 @@
 $(document).ready(() => {
   $.ajax({
     method: 'GET',
-    url: '/home/labelsAndData',
+    url: '/feed/:id/labelsAndData',
     success: function(data) {
       let chartData = data.data
       let chartLabels = data.labels
 
-      let ctd = $('#doughnutChartHome')
+      let ctd = $('#doughnutChartUser')
       /* eslint-disable no-undef*/
       let myDoughnutChart = new Chart(ctd, {
       /* eslint-enable no-undef*/
