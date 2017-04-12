@@ -2,7 +2,7 @@ module.exports = {
   test: {
     client: 'pg',
     connection: 'postgres://localhost/gardengrowers_test',
-    debug: true
+    debug: false
   },
   development: {
     client: 'pg',

@@ -7,7 +7,7 @@
     "knex": "knex",
     "heroku-postbuild": "knex migrate:rollback; knex migrate:latest; knex seed:run;",
     "nodemon": "node app.js",
-    "test": "mocha ./test/test-app"
+    "test": "mocha"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",
