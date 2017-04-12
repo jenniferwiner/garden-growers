@@ -1,11 +1,13 @@
 <script type="text/javascript">
   var userZipCode = {{zip}};
 </script>
-
+<div class="weatherDiv text-center">
+    <h1 id="temp"></h1><h1 id="forecast"></h1>
+</div>
 <div class="sun">
 </div>
 <div class="container-fluid text-center">
-    <h1 class='demologo profile'>Your Garden: {{gardenName}}</h1>
+    <h1 class='demologo profile'>{{gardenName}}</h1>
     <pclass="randomQuote"></p><br>
     <a href="/feed"><button class="hvr-grow-shadow feedBtn" type="button" name="button">Feed</button></a><br><br>
     <button class="hvr-grow-shadow" id="createPlantBtn" type="button" name="button">Add New Plant</button><br>
@@ -79,7 +81,6 @@
         </div><br>
             <div class="price">
               <p class="text-center xx-large avg">
-                <!-- <b><a href="/feed/{{this.id}}"><button class="hvr-grow-shadow gardenView" type="button" name="button">View {{this.garden_name}}'s garden!</button></a><br></b> -->
                 <button class="btn btn-danger delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
                 <button class="btn btn-info editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
               </p>

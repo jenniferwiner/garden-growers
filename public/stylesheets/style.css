@@ -86,7 +86,15 @@ input {
     border: none;
     border-radius: 2.5px;
 }
-
+/*Weather Div*/
+.weatherDiv{
+    background-color: rgb(240, 237, 237);
+    border-radius: 10px;
+    width: 70px;
+    height: 100px;
+    float: left;
+    margin: 10px 10px;
+}
 
 /*BUUTTTONS*/
 
