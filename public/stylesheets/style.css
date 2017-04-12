@@ -88,10 +88,6 @@ input {
 }
 /*Weather Div*/
 .weatherDiv{
-    background-color: rgb(240, 237, 237);
-    border-radius: 10px;
-    width: 70px;
-    height: 100px;
     float: left;
     margin: 10px 10px;
 }
@@ -217,6 +213,17 @@ input {
 
 
 /*Clouds*/
+.cloudsWeather {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+}
+
+.cloudWeather {
+    top: -20px;
+    z-index: 100;
+    fill: rgba(252, 252, 252, 0.5);
+}
 
 .clouds {
     width: 200px;
