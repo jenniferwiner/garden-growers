@@ -27,7 +27,7 @@ router.post('/', ev(validations.post), function(req, res, next) {
     .insert(req.body)
     .returning(['id', 'garden_name', 'email', 'zipcode', 'name'])
     .then(data => {
-      res.redirect('/index')
+      res.redirect('/')
     })
     .catch((err) => {
       next(err)
