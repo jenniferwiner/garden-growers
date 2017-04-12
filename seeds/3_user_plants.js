@@ -8,15 +8,15 @@ exports.seed = function(knex) {
           id: 1,
           user_id: 2,
           plant_id: 1,
-          photo: 'http://www.flytrapcare.com/wp-content/uploads/2015/02/slide3.jpg',
-          description: 'Eats insects for breakfast'
+          photo: 'https://southbaytraps.com/2946-thickbox_default/b52-venus-flytrap.jpg',
+          description: 'I love my venus fly trap! It eats insects for breakfast'
         },
         {
           id: 2,
           user_id: 2,
           plant_id: 2,
-          photo: 'https://www.violetbarn.com/wp/wp-content/uploads/2016/01/cosmoslegend21.jpg',
-          description: 'I am violet!!!!'
+          photo: 'http://www.ksre.k-state.edu/hort-judging/images/flowers-foliages/African-violet-plant-s-web.jpg',
+          description: 'Always in bloom- Loves full sun!'
         }])
       ])
     })

@@ -6,12 +6,12 @@ exports.seed = function(knex) {
         // Inserts seed entries
         knex('plants').insert([{
           id: 1,
-          common_name: 'Venus Fly Trap',
+          common_name: 'Venus fly trap',
           scientific_name: 'Dionaea muscipula'
         },
         {
           id: 2,
-          common_name: 'African Violet',
+          common_name: 'African violet',
           scientific_name: 'Saintpaulias'
         },
         {

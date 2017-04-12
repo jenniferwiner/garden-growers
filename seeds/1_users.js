@@ -6,13 +6,13 @@ exports.seed = function(knex) {
         // Inserts seed entries
         knex('users').insert([{
           id: 1,
-          name: 'Jen',
-          garden_name: 'WildflowerHeaven',
-          email: 'jeniwiner@gmail.com',
-          hashed_password: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
-          // youreawizard
+          name: 'admin',
+          garden_name: 'admin',
+          email: 'admin@gmail.com',
+          hashed_password: '$2a$12$bfIk1Fq6yvs78WxgtJohxOW2SWoc.iYUsYvzbYlpkISLnCW8i17PW',
+          // password
           zipcode: 80302,
-          is_admin: false
+          is_admin: true
         },
         {
           id: 2,
@@ -21,18 +21,18 @@ exports.seed = function(knex) {
           email: 'savagesteve@gmail.com',
           hashed_password: '$2a$12$aOYY9P3WBGQhlJYFRyToo.nm6GfKoGCFYhv55OychlHphY1WvM5t.',
           // venus
-          zipcode: 80501,
+          zipcode: 94707,
           is_admin: false
         },
         {
           id: 3,
-          name: 'admin',
-          garden_name: 'admin',
-          email: 'admin@gmail.com',
-          hashed_password: '$2a$12$bfIk1Fq6yvs78WxgtJohxOW2SWoc.iYUsYvzbYlpkISLnCW8i17PW',
-          // password
-          zipcode: 80302,
-          is_admin: true
+          name: 'Jen',
+          garden_name: 'WildflowerHeaven',
+          email: 'jeniwiner@gmail.com',
+          hashed_password: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
+          // youreawizard
+          zipcode: 19151,
+          is_admin: false
         }])
       ])
     })
