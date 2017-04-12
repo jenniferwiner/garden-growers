@@ -38,7 +38,7 @@ $(document).ready(() => {
   $.ajax({
     method: 'GET',
     // WU KEY      155ad056960470aa
-    url: `http://api.wunderground.com/api/155ad056960470aa/conditions/q/${userZipCode}.json`,
+    url: `https://api.wunderground.com/api/155ad056960470aa/conditions/q/${userZipCode}.json`,
     datatype: 'json',
     success: function(data) {
       let weatherInfo = data
