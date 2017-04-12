@@ -28,6 +28,10 @@ router.get('/', function(req, res, next) {
     }
   })
 })
+router.get('/logout', function(req, res, next) {
+  res.clearCookie('token')
+  res.redirect('/')
+})
 
 router.delete('/', function(req, res, next) {
   let id = req.body.id
