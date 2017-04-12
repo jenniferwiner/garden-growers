@@ -93,45 +93,6 @@ $(document).ready(() => {
         $('#gust').append('<h4>' + weatherObj.windGust.us + ' mph</h4>')
       }
       us()
-
-      function eu() {
-        $('#header-icon').append('Conditions <img src=' + weatherObj.icon.eu + '>')
-        $('#forecast').append('<h4>' + weatherObj.forecast.eu + '</h4>')
-        $('#pressure').append('<h4>' + weatherObj.pressure.eu + ' mb</h4>')
-        $('#humidity').append('<h4>' + weatherObj.humidity.eu + '</h4>')
-        $('#temp').append('<h4>' + weatherObj.temp.eu + ' \u00B0c</h4>')
-        $('#precip').append('<h4>' + weatherObj.precip.eu + ' mm</h4>')
-        $('#wSpeed').append('<h4>' + weatherObj.windSp.eu + ' kph</h4>')
-        $('#vis').append('<h4>' + weatherObj.vis.eu + ' km</h4>')
-        $('#wind-condition').append('<h4>' + weatherObj.windStr.eu + '</h4>')
-        $('#bearing').append('<h4>' + weatherObj.windDir.eu + '</h4>')
-        $('#gust').append('<h4>' + weatherObj.windGust.eu + ' kph</h4>')
-      }
-
-      let toggle = true
-
-      // METRIC TOGGLE
-      $('#toggle').click(function() {
-        toggle = !toggle
-
-        $('#header-icon').text('')
-        $('#forecast').text('')
-        $('#pressure').text('')
-        $('#humidity').text('')
-        $('#temp').text('')
-        $('#precip').text('')
-        $('#wSpeed').text('')
-        $('#vis').text('')
-        $('#wind-condition').text('')
-        $('#bearing').text('')
-        $('#gust').text('')
-
-        if (toggle) {
-          us()
-        } else {
-          eu()
-        }
-      })
     }
   })
 
