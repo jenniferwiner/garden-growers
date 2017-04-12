@@ -7,7 +7,6 @@ const app = require('../app')
 const knex = require('../knex')
 
 suite('/signup Route Tests', () => {
-
   describe('GET /signup', () => {
     it('Load signup page', done => {
       request(app)

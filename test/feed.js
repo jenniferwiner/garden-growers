@@ -7,6 +7,26 @@ const app = require('../app')
 const knex = require('../knex')
 
 suite('/feed Route Tests', () => {
+  before((done) => {
+    knex.migrate.latest()
+      .then(() => {
+        done()
+      })
+      .catch((err) => {
+        done(err)
+      })
+  })
+
+  beforeEach((done) => {
+    knex.seed.run()
+      .then(() => {
+        done()
+      })
+      .catch((err) => {
+        done(err)
+      })
+  })
+
   test('Load feed without token', done => {
     request(app)
       .get('/feed')
