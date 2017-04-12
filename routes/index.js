@@ -6,7 +6,8 @@ const knex = require('../knex')
 const jwt = require('jsonwebtoken')
 const boom = require('boom')
 const bcrypt = require('bcrypt')
-
+const ev = require('express-validation')
+const validations = require('../validations/index')
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
@@ -14,7 +15,7 @@ router.get('/', function(req, res, next) {
   })
 })
 
-router.post('/', (req, res, next) => {
+router.post('/', ev(validations.post), (req, res, next) => {
   let gardenName = req.body.garden_name
   let password = req.body.password
     // console.log('testing');

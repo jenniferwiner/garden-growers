@@ -20,6 +20,5 @@ module.exports.post = {
     zipcode: Joi.number()
       .integer()
       .required()
-      .trim()
   }
 }
