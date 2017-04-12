@@ -43,7 +43,6 @@ $(document).ready(() => {
     success: function(data) {
       let weatherInfo = data
       console.log(weatherInfo)
-
       // Filling the weather object
       let weatherObj = {
         humidity: {},
@@ -58,9 +57,7 @@ $(document).ready(() => {
         forecast: {},
         pressure: {}
       }
-
       let obs = weatherInfo.current_observation
-
       // METRIC
       weatherObj.humidity.eu = obs.relative_humidity
       weatherObj.temp.eu = obs.temp_c
@@ -73,7 +70,6 @@ $(document).ready(() => {
       weatherObj.vis.eu = obs.visibility_km
       weatherObj.forecast.eu = obs.weather
       weatherObj.pressure.eu = obs.pressure_mb
-
       // US
       weatherObj.humidity.us = obs.relative_humidity
       weatherObj.temp.us = obs.temp_f
@@ -86,7 +82,6 @@ $(document).ready(() => {
       weatherObj.vis.us = obs.visibility_mi
       weatherObj.forecast.us = obs.weather
       weatherObj.pressure.us = obs.pressure_in
-
       function us() {
         $('#header-icon').append('<img src=' + weatherObj.icon.us + '>')
         $('#forecast').append('<h4>' + weatherObj.forecast.us + '</h4>')
@@ -101,7 +96,6 @@ $(document).ready(() => {
         $('#gust').append('<h4>' + weatherObj.windGust.us + ' mph</h4>')
       }
       us()
-
       function eu() {
         $('#header-icon').append('Conditions <img src=' + weatherObj.icon.eu + '>')
         $('#forecast').append('<h4>' + weatherObj.forecast.eu + '</h4>')

@@ -26,7 +26,8 @@ router.get('/', function(req, res, next) {
               .then(userData => {
                 res.render('home', {
                   gardenName: userData[0].garden_name,
-                  numberOfPlants: 0
+                  numberOfPlants: 0,
+                  zip: userData[0].zipcode
                 })
               })
           } else {
