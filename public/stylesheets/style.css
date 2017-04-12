@@ -269,7 +269,7 @@ input {
 /*BIRD*/
 
 #bird {
-    animation: fly 10s linear infinite;
+    animation: fly 5s linear infinite;
 }
 
 @keyframes fly {
@@ -338,7 +338,9 @@ hr {
     position: relative;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
-
+.panelheight{
+  height: 730px;
+}
 .panelCard{
   font-family: 'Delius', cursive;
   padding: 0;
@@ -442,12 +444,34 @@ hr {
 /* Portrait and Landscape */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-    .logo {
-        margin-top: 350px;
-    }
-    .footer {
-        height: 1020px;
-    }
+  .footer{
+    height: 150px;
+  }
+  input{
+    width: 290px;
+    height: 45px;
+  }
+  #loginBtn{
+    width: 290px;
+  }
+  .logo {
+      margin-top: 10px;
+  }
+  .footerImg {
+      width: 100%;
+      margin-top: 50px;
+  }
+  .footer{
+    height: 40px;
+  }
+  @keyframes fly {
+      0% {
+          transform: translateX(80vw);
+      }
+      100% {
+          transform: translateX(-0vw);
+      }
+  }
 }
 
 
@@ -458,14 +482,43 @@ hr {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     .logo {
-        margin-top: 450px;
+        margin-top: 10px;
     }
     .footer {
-        height: 930px;
+      width: 100%;
+        margin-top: 20px;
+        height: 70px;
+    }
+    input{
+      width: 340px;
+      height: 45px;
+    }
+    #loginBtn{
+      width: 330px;
+    }
+    @keyframes fly {
+        0% {
+            transform: translateX(85vw);
+        }
+        100% {
+            transform: translateX(-0vw);
+        }
     }
 }
 
-
+/*6 Plus*/
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) {
+  .footer{
+    height: 150px;
+  }
+  input{
+    width: 340px;
+    height: 45px;
+  }
+  #loginBtn{
+    width: 330px;
+  }
+}
 /* ----------- iPad 3 and 4 ----------- */
 
 
@@ -481,6 +534,13 @@ hr {
     .footerImgFooter {
         margin-top: 190px;
     }
+    input{
+      width: 440px;
+      height: 50px;
+    }
+    #loginBtn{
+      width: 330px;
+    }
 }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
@@ -492,17 +552,22 @@ hr {
 
 /*------ Large Screen -------*/
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-    .logo {
-        margin-top: 350px;
-    }
-    .footer {
-        height: 630px;
-    }
-}
-
-@media screen and (min-device-width: 1400px) and (max-device-width: 1800px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-    .footer {
-        height: 400px;
-    }
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .footer {
+      margin-top: 450px;
+      height: 300px;
+  }
+  .randomQuote{
+    margin-top: 40px;
+  }
+  .footerImg {
+      margin-top: 390px;
+  }
+  input{
+    width: 540px;
+    height: 60px;
+  }
+  #loginBtn{
+    width: 330px;
+  }
 }

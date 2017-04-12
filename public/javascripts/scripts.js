@@ -145,26 +145,28 @@ $(document).ready(() => {
 
   // toggle edit plant
   $('.editBtn').click(() => {
-    $('.editForm').toggleClass('hidden')
+    $('.panel').toggleClass('panelheight')
+    $('.editBtn').removeClass('hidden')
+  })
 
-    $('.editSubmit').click(() => {
-      let id = $(event.target).attr('data-id')
-      $.ajax({
-        method: 'PATCH',
-        url: '/home',
-        data: {
+  $('#editSubmit').click(() => {
+    let user_plant_id = $(event.target).attr('data-id')
+    let description = $('#edit_description').val()
+    let plant_count = $('#edit_plant_count').val()
+    let photo = $('#edit_photo').val()
 
-          id: id
-        },
-        success: (data) => {
-          if (data) {
-            location.reload()
-          }
-        },
-        error: (err) => {
-          console.log('Error: ', err)
+    $.ajax({
+      method: 'PATCH',
+      url: '/home',
+      data: { user_plant_id, description, plant_count, photo },
+      success: (data) => {
+        if (data) {
+          location.reload()
         }
-      })
+      },
+      error: (err) => {
+        console.log('Error: ', err)
+      }
     })
   })
 })

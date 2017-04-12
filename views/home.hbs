@@ -20,7 +20,6 @@
         <button class="hvr-grow-shadow" id="submitCreateBtn" type="submit" name="">Submit New Plant</button>
     </form>
 </div>
-
 <div class="container text-center">
   <div class="right">
     <div class="panelCard panel-default clicable noteCard">
@@ -28,7 +27,7 @@
             <div class="top-content">
                 <div class="question">
                     <p class="x-large"><b>
-                      <h4>Total # Of Plants: </h4>
+                      <h4>Number of Plant Types: </h4>
                       <h1>{{numberOfPlants}}</h1>
                     </b></p>
                 </div>
@@ -58,12 +57,10 @@
         <canvas id="doughnutChartHome" width="400" height="150"></canvas><br><br>
     </div>
 </div>
-
-
 {{#each userPlants}}
 <div class="container text-center" style="margin-top: 40px">
   <!-- <div class="row"> -->
-    <div class="col-sm-6">
+    <div class="col-md-6">
       <div class="panel panel-default clicable">
         <div class="panel-body">
           <div class="top-img">
@@ -85,27 +82,24 @@
                 <!-- <b><a href="/feed/{{this.id}}"><button class="hvr-grow-shadow gardenView" type="button" name="button">View {{this.garden_name}}'s garden!</button></a><br></b> -->
                 <button class="btn btn-danger delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
                 <button class="btn btn-info editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
-
               </p>
             </div><br>
             <hr>
             <div class="extra-info text-muted">
-                <div class="pull-right">Updated: {{this.created_at}}</div>
+                <div class="pull-right">Updated: {{this.updated_at}}</div><br>
+                <div class="container-fluid text-center editForm hidden">
+                    <div>
+                        <input type="text" id="edit_description" value="{{this.description}}" placeholder=" Description"><br>
+                        <input type="text" id="edit_plant_count" value="{{this.plant_count}}" placeholder=" Number of plants being planted"><br>
+                        <input type="text" id="edit_photo" value="{{this.photo}}" placeholder="Add Plant Photo"><br>
+                        <button class="hvr-grow-shadow" id="editSubmit" type="submit" data-id={{this.id}}>Submit Updates</button>
+                    </div>
+                </div>
             </div><br>
         <!-- </div> -->
       </div>
     </div>
 </div>
-</div>
-<div class="container-fluid text-center editForm hidden">
-    <form class="" action="/home" method="patch">
-        <input type="text" name="common_name" value="" placeholder=" Common Name"><br>
-        <input type="text" name="scientific_name" value="" placeholder=" Scientic Name"><br>
-        <input type="text" name="description" value="" placeholder=" Description"><br>
-        <input type="text" name="plant_count" value="" placeholder=" Number of plants being planted"><br>
-        <input type="text" name="photo" value="" placeholder=" Add Plant Photo"><br>
-        <button class="hvr-grow-shadow" id="editSubmit" type="submit" name="">Submit Updates</button>
-    </form>
 </div>
 {{/each}}
 <!-- BACKGROUND IMG -->
