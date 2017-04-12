@@ -430,7 +430,7 @@ hr {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     .logo {
-        margin-top: 330px;
+        margin-top: 30px;
     }
     .demologo {
         margin-top: 30px;
@@ -451,6 +451,37 @@ hr {
     .right {
         width: 100%;
         float: none;
+    }
+    .randomQuote{
+      display: none;
+    }
+    .loginForm{
+      margin-top: -100px;
+    }
+    .panel{
+      width: 300px;
+      height: 700px;
+      margin: 5px 5px;
+    }
+    .feedPanel, .userPanel{
+      margin: -5px;
+    }
+    .gardenView{
+      margin: -25px;
+      height: 50px;
+    }
+    #loginBtn, #createPlantBtn, #submitCreateBtnDemo, #createPlantBtnDemo, #submitCreateBtn, .feedBtn, .homeBtn, .gardenView, .signupDemoBtn, #logoutBtn{
+      width: 300px;
+    }
+    #doughnutChartHome{
+    }
+    .myMostCommon{
+      width: 210px;
+      height: 150px;
+    }
+    .numberOfPlants{
+      width: 210px;
+      height: 150px;
     }
 }
 
@@ -476,10 +507,22 @@ hr {
   }
   .footerImg {
       width: 100%;
-      margin-top: 50px;
+      margin-top: 160px;
   }
   .footer{
-    height: 40px;
+    display: none;
+  }
+  .panel{
+    width: 300px;
+    height: 700px;
+    margin: 5px 5px;
+  }
+  .feedPanel, .userPanel{
+    margin: -15px;
+  }
+  .gardenView{
+    margin: -25px;
+    height: 50px;
   }
   @keyframes fly {
       0% {

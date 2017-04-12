@@ -25,7 +25,7 @@
 {{#each feedData}}
 <div class="text-center" style="margin-top: 40px">
     <div class="col-md-6">
-      <div class="panel panel-default clicable">
+      <div class="panel panel-default clicable feedPanel">
         <div class="panel-body">
           <div class="top-img">
             <img class="top-img" src="{{this.photo}}">
@@ -43,7 +43,6 @@
         </div><br>
         <p class="text-center xx-large avg">
           <b><a href="/feed/{{this.id}}"><button class="hvr-grow-shadow gardenView" type="button" name="button">View {{this.garden_name}}'s garden!</button></a><br></b>
-          <span class="currency"><i class="fa fa-eur"></i></span>
         </p>
         </div>
       </div>
