@@ -22,6 +22,5 @@ module.exports.post = {
 }
 module.exports.patch = {
   body: {
-    
   }
 }
