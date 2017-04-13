@@ -8,6 +8,8 @@ const boom = require('boom')
 const bcrypt = require('bcrypt')
 const ev = require('express-validation')
 const validations = require('../validations/index')
+const gapi = require('googleapis')
+// googleapis
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
@@ -15,13 +17,11 @@ router.get('/', function(req, res, next) {
   })
 })
 
-router.post('/', (req, res, next) => {
+router.post('/', function(req, res, next) {
   let gardenName = req.body.garden_name
   let password = req.body.password
   let email = req.body.email
-  console.log(req.body)
-  console.log('post testing')
-    // console.log('testing');
+
   if (gardenName) {
     knex('users')
     .where('garden_name', gardenName)
@@ -44,11 +44,11 @@ router.post('/', (req, res, next) => {
               res.redirect('/admin')
             }
           } else {
-            next(boom.create(400, 'Bad garden name or password'))
+            res.render('index', { error: 'Bad garden name or password' })
           }
         })
       } else {
-        next(boom.create(400, 'Bad garden name or password'))
+        res.render('index', { error: 'Bad garden name or password' })
       }
     })
   } else if (email) {
@@ -56,7 +56,6 @@ router.post('/', (req, res, next) => {
     .where('email', email)
     .then((data) => {
       if (data) {
-        console.log('email data');
         let token = jwt.sign({
           exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 30),
           garden_name: data[0].gardenName,
@@ -67,13 +66,12 @@ router.post('/', (req, res, next) => {
           httpOnly: true
         })
         if (data[0].is_admin === false) {
-          console.log('testing')
           res.redirect('/home')
         } else if (data[0].is_admin === true) {
           res.redirect('/admin')
         }
       } else {
-        next(boom.create(400, 'No user exists with that email'))
+        res.render('index', { error: 'Email does not exist' })
       }
     })
   }

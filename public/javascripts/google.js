@@ -1,33 +1,40 @@
-    function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-      const profile = googleUser.getBasicProfile()
-      console.log('ID: ' + profile.getId())
+function onSignIn(googleUser) {
+  // Useful data for your client-side scripts:
+  const profile = googleUser.getBasicProfile()
 
-  // Don't send this directly to your server!
-      console.log('Full Name: ' + profile.getName())
-      console.log('Given Name: ' + profile.getGivenName())
-      console.log('Family Name: ' + profile.getFamilyName())
-      console.log('Image URL: ' + profile.getImageUrl())
-      console.log('Email: ' + profile.getEmail())
+  // The ID token you need to pass to your backend:
+  let id_token = googleUser.getAuthResponse().id_token
 
-        // The ID token you need to pass to your backend:
-      let id_token = googleUser.getAuthResponse().id_token
-      console.log('ID Token: ' + id_token)
-
-      $.ajax({
-        method: 'POST',
-        url: '/',
-        data: {
-          name: profile.getName(),
-          email: profile.getEmail()
-        },
-        success: (data) => {
-          if (data) {
-            window.location = '/home'
-          }
-        },
-        error: (err) => {
-          console.log(err)
-        }
-      })
+  $.ajax({
+    method: 'POST',
+    url: '/',
+    data: {
+      name: profile.getName(),
+      email: profile.getEmail()
+    },
+    success: (data) => {
+      if (data) {
+        window.location = '/home'
+      }
+    },
+    error: (err) => {
+      console.log(err)
     }
+  })
+}
+
+function signOut() {
+  gapi.load('auth2', function() {
+    gapi.auth2.init().then(function() {
+      let auth2 = gapi.auth2.getAuthInstance()
+      auth2.signOut().then(function() {
+        auth2.disconnect()
+        document.location = '/'
+      })
+    })
+  })
+}
+
+// $('#logoutBtn').click(() => {
+//   signOut()
+// })
