@@ -21,11 +21,34 @@ router.get('/:id', (req, res, next) => {
       let [userPlantsArr, count, commonPlantsArr] = values
       res.render('user', {
         gardenName: userPlantsArr[0].garden_name,
+        gardenId: userId,
         gardenData: userPlantsArr,
         numberOfPlants: count[0].count,
         commonPlants: commonPlantsArr
       })
     })
+})
+
+router.get('/:id/labelsAndData', function(req, res, next) {
+  let id = req.params.id
+  findUserPlants(id)
+  .then((data) => {
+    let chartData = data.map(plant => {
+      return plant.plant_count
+    })
+    let chartLabels = data.map(plant => {
+      return plant.common_name
+    })
+    res.set('Content-Type', 'application/json')
+    res.send({
+      data: chartData,
+      labels: chartLabels
+    })
+  })
+  .catch((err) => {
+    res.status(404)
+    res.send('Can\'t find UserId')
+  })
 })
 
 function countUserPlants(user_id) {

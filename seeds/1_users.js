@@ -18,7 +18,7 @@ exports.seed = function(knex) {
           id: 2,
           name: 'Steve',
           garden_name: 'CarnivorousCircle',
-          email: 'savagesteve@gmail.com',
+          email: 'steven.hendricks@gmail.com',
           hashed_password: '$2a$12$aOYY9P3WBGQhlJYFRyToo.nm6GfKoGCFYhv55OychlHphY1WvM5t.',
           // venus
           zipcode: 94707,

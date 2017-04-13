@@ -18,7 +18,7 @@
 </div>
 <!-- HEADER -->
 <div class="container-fluid text-center">
-    <h1 class='demologo profile'>{{gardenName}}</h1>
+    <h1 class='demologo profile' id="gardenHeader" data-id="{{gardenId}}">{{gardenName}}</h1>
     <p class="randomQuote"></p><br>
     <a href="/feed"><button class="hvr-grow-shadow feedBtn" type="button" name="button">Feed</button></a><br><br>
     <a href="/home"><button class="hvr-grow-shadow homeBtn" type="button" name="button">Home</button></a><br><br>
@@ -39,7 +39,7 @@
   </div>
   <div class="row">
       <div class="col-xs-12">
-          <canvas id="doughnutChartHome" width="400" height="150"></canvas>
+          <canvas id="doughnutChartUser" width="400" height="150"></canvas>
       </div>
     </div>
   </div>
@@ -80,3 +80,4 @@
         </div>
       </div>
   {{/each}}
+  <script src="/javascripts/user.js" charset="utf-8"></script>

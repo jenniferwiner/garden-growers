@@ -20,7 +20,10 @@ input:hover {
     border: 1px solid #968f76
 }
 
+/*google auth*/
+.g-signin2{
 
+}
 /*HIDDEN*/
 
 .hidden {
@@ -349,8 +352,8 @@ hr {
      margin: 20px 20px;
     font-family: 'Delius', cursive;
     padding: 0;
-    width: 560px;
-    height: 560px;
+    width: 460px;
+    height: 600px;
     overflow: hidden !important;
     position: relative;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
