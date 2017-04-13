@@ -11,6 +11,7 @@ const signup = require('./routes/signup')
 const home = require('./routes/home')
 const feed = require('./routes/feed')
 const admin = require('./routes/admin')
+const meet = require('./routes/meet')
 
 const app = express()
 require('dotenv').config()
@@ -33,6 +34,7 @@ app.use('/signup', signup)
 app.use('/home', home)
 app.use('/feed', feed)
 app.use('/admin', admin)
+app.use('/meet', meet)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

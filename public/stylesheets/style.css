@@ -433,7 +433,57 @@ hr {
     margin-bottom: 20px;
 }
 
+/*MEET US*/
+/*about us*/
+.bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 500px;
+}
 
+.us {
+  height: 300px;
+  border: 3px solid rgb(56, 87, 17);
+  border-radius: 100%;
+}
+
+.cohort {
+  font-family: 'Railway', sans-serif;
+  color: rgb(119, 107, 43);
+  font-size: 4vmin;
+}
+
+.linked {
+  height: 50px;
+}
+
+.btn {
+  margin: 20px;
+  color: black;
+  background-color: #C1BCAC;
+  border-radius: 5px;
+}
+
+#meet{
+  width: 120px;
+  border: none;
+  background-color: #C1BCAC;
+  border-radius: 5px;
+}
+
+#header, #header1{
+  font-size: 9vmin;
+  letter-spacing: 10px;
+  font-family: 'Lobster', sans-serif;
+  color: rgb(69, 69, 69);
+}
+#gal, #gal1{
+  font-size: 6vmin;
+  font-family: 'Railway', sans-serif;;
+  letter-spacing: -2px;
+}
 /* ----------- iPhone 4 and 4S ----------- */
 
 
