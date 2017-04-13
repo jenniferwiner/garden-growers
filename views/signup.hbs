@@ -67,13 +67,14 @@
 <!-- LOGIN FORM -->
 <div class="container-fluid text-center loginForm">
   <h4>Join the garden</h4>
+  <h5 style="color:red;">{{error}}</h5>
     <div class="text-center">
       <form class="" action="/signup" method="post">
-        <input type="text" name="garden_name" value="" placeholder=" Garden Name"><br>
-        <input type="text" name="email" value="" placeholder=" Email"><br>
-        <input type="text" name="name" value="" placeholder=" First and Last Name"><br>
-        <input type="number" name="zipcode" value="" placeholder=" Zipcode"><br>
-        <input type="password" name="password" value="" placeholder=" Password"><br><br>
+        <input type="text" name="garden_name" value="" placeholder=" Garden Name" required><br>
+        <input type="text" name="email" value="" placeholder=" Email" required><br>
+        <input type="text" name="name" value="" placeholder=" First and Last Name" required><br>
+        <input type="number" name="zipcode" value="" placeholder=" Zipcode" required><br>
+        <input type="password" name="password" value="" placeholder=" Password" required><br><br>
         <button class="hvr-bubble-top" id="loginBtn" type="submit" name="" value="">Create Garden</button>
       </form>
     </div>

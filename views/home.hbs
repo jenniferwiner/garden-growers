@@ -13,9 +13,9 @@
 <svg class="clouds cloud1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
  <path id="cloud-icon" d="M406.1 227.63c-8.23-103.65-144.71-137.8-200.49-49.05 -36.18-20.46-82.33 3.61-85.22 45.9C80.73 229.34 50 263.12 50 304.1c0 44.32 35.93 80.25 80.25 80.25h251.51c44.32 0 80.25-35.93 80.25-80.25C462 268.28 438.52 237.94 406.1 227.63z"/>
 </svg>
-<div class="weatherDiv">
+<!-- <div class="weatherDiv">
   <h1 id="temp"></h1><h1 id="forecast"></h1>
-</div>
+</div> -->
 <div class="sun">
 </div>
 <div class="container-fluid text-center">
@@ -29,15 +29,15 @@
 </div><br>
 <div class="container-fluid text-center createForm hidden">
     <form class="" action="/home" method="post">
-        <input type="text" name="common_name" value="" placeholder=" Common Name"><br>
-        <input type="text" name="scientific_name" value="" placeholder=" Scientic Name"><br>
-        <input type="text" name="description" value="" placeholder=" Description"><br>
-        <input type="text" name="plant_count" value="" placeholder=" Number of plants being planted"><br>
-        <input type="text" name="photo" value="" placeholder=" Add Plant Photo"><br>
+        <input type="text" name="common_name" value="" placeholder=" Common Name" required><br>
+        <input type="text" name="scientific_name" value="" placeholder=" Scientic Name" required><br>
+        <input type="text" name="description" value="" placeholder=" Description" required><br>
+        <input type="text" name="plant_count" value="" placeholder=" Number of plants being planted" required><br>
+        <input type="text" name="photo" value="" placeholder=" Add Plant Photo" required><br>
         <button class="hvr-grow-shadow" id="submitCreateBtn" type="submit" name="">Submit New Plant</button>
     </form>
 </div>
-<div class="container text-center">
+<div class="container">
   <div class="right">
     <div class="panelCard panel-default clicable noteCard">
         <div class="panel-body">
@@ -46,7 +46,8 @@
                     <p class="x-large"><b>
                       <h4>Number of Plant Types: </h4>
                       <h1>{{numberOfPlants}}</h1>
-                    </b></p>
+                      <h4 class="weather">Weather: </h4><br><h4 id="temp"></h4>
+                    </b></p><br>
                 </div>
             </div>
         </div>

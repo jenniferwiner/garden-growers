@@ -17,7 +17,7 @@ router.post('/', ev(validations.post), function(req, res, next) {
   .where('garden_name', req.body.garden_name)
   .then(user => {
     if (user.length !== 0) {
-      return next(boom.create(400, 'Garden Name already exists'))
+      res.render('signup', { error: 'Garden Name already exists' })
     }
     let hashed = bcrypt.hashSync(req.body.password, 12)
     delete req.body.password

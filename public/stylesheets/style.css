@@ -94,7 +94,10 @@ input {
     float: left;
     margin: 10px 10px;
 }
-
+#temp, #forecast, .weather{
+  float: right;
+  margin-top: -35px;
+}
 /*BUUTTTONS*/
 
 .hvr-bubble-top {
@@ -164,7 +167,7 @@ input {
 .footer {
     margin-top: 60px;
     background-color: rgb(128, 177, 55);
-    height: 200px;
+    height: 300px;
 }
 
 .footerImg {
@@ -349,7 +352,8 @@ hr {
 }
 
 .panel {
-     margin: 20px 20px;
+     /*margin: 20px 20px;*/
+     margin-left: 100px;
     font-family: 'Delius', cursive;
     padding: 0;
     width: 460px;
@@ -370,6 +374,10 @@ hr {
   background-color: #C1BCAC;
   border-radius: 5px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.noteCard{
+  width: 400px;
 }
 
 .panel .panel-body {
@@ -535,6 +543,14 @@ hr {
           transform: translateX(-0vw);
       }
   }
+  .left {
+      width: 100%;
+      float: none;
+  }
+  .right {
+      width: 100%;
+      float: none;
+  }
 }
 
 
@@ -567,6 +583,14 @@ hr {
             transform: translateX(-0vw);
         }
     }
+    .left {
+        width: 100%;
+        float: none;
+    }
+    .right {
+        width: 100%;
+        float: none;
+    }
 }
 
 /*6 Plus*/
@@ -580,6 +604,14 @@ hr {
   }
   #loginBtn{
     width: 330px;
+  }
+  .left {
+      width: 100%;
+      float: none;
+  }
+  .right {
+      width: 100%;
+      float: none;
   }
 }
 /* ----------- iPad 3 and 4 ----------- */
@@ -603,6 +635,14 @@ hr {
     }
     #loginBtn{
       width: 330px;
+    }
+    .left {
+        width: 100%;
+        float: none;
+    }
+    .right {
+        width: 100%;
+        float: none;
     }
 }
 
@@ -632,5 +672,13 @@ hr {
   }
   #loginBtn{
     width: 330px;
+  }
+  .left {
+      width: 100%;
+      float: none;
+  }
+  .right {
+      width: 100%;
+      float: none;
   }
 }
