@@ -2,7 +2,8 @@ const express = require('express')
 const router = express.Router()
 const knex = require('../knex')
 const jwt = require('jsonwebtoken')
-/* GET users listing. */
+
+/* GET plant feed */
 router.get('/', (req, res, next) => {
   knex('users')
   .join('user_plants', 'users.id', '=', 'user_plants.user_id')
@@ -13,6 +14,7 @@ router.get('/', (req, res, next) => {
   })
 })
 
+/* GET individual user's plant feed */
 router.get('/:id', (req, res, next) => {
   let userId = req.params.id
 
@@ -29,6 +31,7 @@ router.get('/:id', (req, res, next) => {
     })
 })
 
+/* GET individual user's plant-breakdown graph data */
 router.get('/:id/labelsAndData', function(req, res, next) {
   let id = req.params.id
   findUserPlants(id)

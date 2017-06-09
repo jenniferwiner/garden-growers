@@ -7,11 +7,13 @@ const knex = require('../knex')
 const boom = require('boom')
 const ev = require('express-validation')
 const validations = require('../validations/signup')
-/* GET users listing. */
+
+/* GET signup page */
 router.get('/', function(req, res, next) {
   res.render('signup')
 })
 
+/* POST new user */
 router.post('/', ev(validations.post), function(req, res, next) {
   knex('users')
   .where('garden_name', req.body.garden_name)
