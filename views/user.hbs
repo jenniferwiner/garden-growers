@@ -24,22 +24,23 @@
     <a href="/home"><button class="hvr-grow-shadow homeBtn" type="button" name="button">Home</button></a><br><br>
 </div><br>
 <!-- CONTAINERS FOR INSERTS -->
-<div class="container" style="height: 500px;">
-  <div class="row">
-      <div class="col-xs-6 myMostCommon">
-        <h4>Most Common Plants: </h4>
-        {{#each commonPlants}}
-        <h4>{{this.common_name}}: {{this.plant_count}}</h4>
-        {{/each}}
+<div class="container" style="height: auto;">
+  <div class="container" style="height: auto;">
+    <div class="row">
+      <div class="col-md-6 about-plants">
+        <div class="col-xs-6 myMostCommon">
+          <h4>Most Common Plants: </h4>
+          {{#each commonPlants}}
+          <h5>{{this.common_name}}: {{this.plant_count}}</h5>
+          {{/each}}
+        </div>
+        <div class="col-xs-6 numberOfPlants">
+          <h4>Number of Plant Types:
+          <h4>{{numberOfPlants}}</h4></h4>
+        </div>
       </div>
-      <div class="col-xs-6 numberOfPlants">
-        <h4>Number of Plant Types: </h4>
-        <h1>{{numberOfPlants}}</h1>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-xs-12">
-          <canvas id="doughnutChartUser" width="400" height="150"></canvas>
+      <div class="col-md-6">
+          <canvas id="doughnutChartUser" width="400" height="250"></canvas>
       </div>
     </div>
   </div>
@@ -80,5 +81,6 @@
         </div>
       </div>
   {{/each}}
+</div>
 </div>
 <script src="/javascripts/user.js" charset="utf-8"></script>

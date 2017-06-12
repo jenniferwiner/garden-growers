@@ -86,56 +86,13 @@ $(document).ready(() => {
       let weatherInfo = data
       // Filling the weather object
       let weatherObj = {
-        humidity: {},
-        temp: {},
-        windSp: {},
-        windStr: {},
-        windGust: {},
-        windDir: {},
-        precip: {},
-        icon: {},
-        vis: {},
-        forecast: {},
-        pressure: {}
+        temp: {}
       }
       let obs = weatherInfo.current_observation
-      // METRIC
-      weatherObj.humidity.eu = obs.relative_humidity
-      weatherObj.temp.eu = obs.temp_c
-      weatherObj.windSp.eu = obs.wind_kph
-      weatherObj.windStr.eu = obs.wind_string
-      weatherObj.windGust.eu = obs.wind_gust_kph
-      weatherObj.windDir.eu = obs.wind_dir
-      weatherObj.precip.eu = obs.precip_today_metric
-      weatherObj.icon.eu = obs.icon_url
-      weatherObj.vis.eu = obs.visibility_km
-      weatherObj.forecast.eu = obs.weather
-      weatherObj.pressure.eu = obs.pressure_mb
-      // US
-      weatherObj.humidity.us = obs.relative_humidity
       weatherObj.temp.us = obs.temp_f
-      weatherObj.windSp.us = obs.wind_mph
-      weatherObj.windStr.us = obs.wind_string
-      weatherObj.windGust.us = obs.wind_gust_mph
-      weatherObj.windDir.us = obs.wind_dir
-      weatherObj.precip.us = obs.precip_today_in
-      weatherObj.icon.us = obs.icon_url
-      weatherObj.vis.us = obs.visibility_mi
-      weatherObj.forecast.us = obs.weather
-      weatherObj.pressure.us = obs.pressure_in
 
       function us() {
-        $('#header-icon').append('<img src=' + weatherObj.icon.us + '>')
-        $('#forecast').append('<h4>' + weatherObj.forecast.us + '</h4>')
-        $('#pressure').append('<h4>' + weatherObj.pressure.us + ' in</h4>')
-        $('#humidity').append('<h4>' + weatherObj.humidity.us + '</h4>')
         $('#temp').append('<h4>' + weatherObj.temp.us + ' \u00B0f</h4>')
-        $('#precip').append('<h4>' + weatherObj.precip.us + ' in</h4>')
-        $('#wSpeed').append('<h4>' + weatherObj.windSp.us + ' mph</h4>')
-        $('#vis').append('<h4>' + weatherObj.vis.us + ' mi</h4>')
-        $('#wind-condition').append('<h4>' + weatherObj.windStr.us + '</h4>')
-        $('#bearing').append('<h4>' + weatherObj.windDir.us + '</h4>')
-        $('#gust').append('<h4>' + weatherObj.windGust.us + ' mph</h4>')
       }
       us()
     }

@@ -2,27 +2,27 @@
 <div class="sun">
 </div>
 <!-- HEADER -->
-<div class="container-fluid text-center">
-    <h1 class='demologo profile'>Garden Name</h1>
-    <p class="randomQuote"></p><br>
-    <a href="/signup"><button class="hvr-grow-shadow signupDemoBtn" type="button" name="button">Sign Up</button></a><br><br>
-    <button id="createPlantBtnDemo" class=hvr-grow-shadow "" type="button" name="button">Add New Plant</button><br>
+<div class="container text-center">
+  <h1 class="demologo profile">Garden Name</h1>
+  <p class="randomQuote"></p><br>
+  <a href="/signup"><button class="hvr-grow-shadow signupDemoBtn" type="button" name="button">Sign Up Now!</button></a><br><br>
+  <button id="createPlantBtnDemo" class=hvr-grow-shadow "" type="button" name="button">Add New Plant</button><br>
 </div><br>
 <div class="container-fluid text-center createForm hidden">
-    <form class="" action="index.html" method="post">
-        <input type="text" name="" value="" placeholder=" Common Name"><br>
-        <input type="text" name="" value="" placeholder=" Scientic Name"><br>
-        <input type="text" name="" value="" placeholder=" Description"><br>
-        <input type="text" name="" value="" placeholder=" Date Added - (MM/DD/YYYY)"><br>
-        <input id="submitCreateBtnDemo" type="submit" name="Submit New Plant">
-    </form>
+  <form class="" action="index.html" method="post">
+    <input type="text" name="" value="" placeholder=" Common Name"><br>
+    <input type="text" name="" value="" placeholder=" Scientic Name"><br>
+    <input type="text" name="" value="" placeholder=" Description"><br>
+    <input type="text" name="" value="" placeholder=" Date Added - (MM/DD/YYYY)"><br>
+    <input id="submitCreateBtnDemo" type="submit" name="Submit New Plant">
+  </form>
 </div>
 <!-- CLOUD ANIMATION -->
 <div class="background">
   <svg class="clouds cloud0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
    <path id="cloud-icon" d="M406.1 227.63c-8.23-103.65-144.71-137.8-200.49-49.05 -36.18-20.46-82.33 3.61-85.22 45.9C80.73 229.34 50 263.12 50 304.1c0 44.32 35.93 80.25 80.25 80.25h251.51c44.32 0 80.25-35.93 80.25-80.25C462 268.28 438.52 237.94 406.1 227.63z"/>
  </svg>
-   <svg class="clouds cloud1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+  <svg class="clouds cloud1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
     <path id="cloud-icon" d="M406.1 227.63c-8.23-103.65-144.71-137.8-200.49-49.05 -36.18-20.46-82.33 3.61-85.22 45.9C80.73 229.34 50 263.12 50 304.1c0 44.32 35.93 80.25 80.25 80.25h251.51c44.32 0 80.25-35.93 80.25-80.25C462 268.28 438.52 237.94 406.1 227.63z"/>
 	</svg>
   <svg class="clouds cloud2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
@@ -33,183 +33,185 @@
   </svg>
 </div>
 <!-- CARDS FOR DATA -->
-<div class="container-fluid" style="height: 500px;">
-    <div class="container" style="height: 500px;">
-        <div class="row">
-            <div class="col-xs-6 myMostCommon">
-                <h4>My Most Common Plants: </h4><br>
-                <h6>Sunflower, Apple Tree, Dill</h6>
-            </div>
-            <div class="col-xs-6 numberOfPlants">
-              <h4>Number of Plant Types: <h3>4</h3></h4>
-            </div>
+<div class="container" style="height: auto;">
+  <div class="container" style="height: auto;">
+    <div class="row">
+      <div class="col-md-6 about-plants">
+        <div class="col-xs-6 myMostCommon">
+          <h4>My Most Common Plants: </h4>
+          <h5>Sunflower, Apple Tree, Dill</h5>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <canvas id="doughnutChartDemo" width="400" height="150"></canvas><br><br>
-            </div>
+        <div class="col-xs-6 numberOfPlants">
+          <h4>Number of Plant Types: <h4>4</h4></h4>
+          <br />
+          <h4 class="weather">Weather: </h4><br><h4 id="temp">70&deg;f</h4>
         </div>
-    </div><br>
-    <div class="text-center container">
-      <h1>My Garden</h1>
+      </div>
+      <div class="col-md-6">
+        <canvas id="doughnutChartDemo" width="400" height="250"></canvas>
+      </div>
     </div>
-    <!-- GRID FOR INSERTING -->
-    <div class="container text-center" style="margin-top: 40px">
+  </div>
+</div>
+<br>
+<!-- GRID FOR INSERTING -->
+<div class="container text-center plant-container" style="margin-top: 40px">
+  <h1 class="my-garden">My Garden</h1>
   <div class="col-md-6">
-    <div class="panel panel-default clicable">
+    <div class="panel panel-default clickable">
       <div class="panel-body">
         <div class="top-img">
-          <img class="top-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/440px-Red_Apple.jpg">
+          <img class="top-img" src="https://www.starkbros.com/images/dynamic/881.jpg">
         </div>
-      <div class="top-content">
+        <div class="top-content">
           <div class="question">
-              <p class="x-large"><b>Apple Tree | Malus pumila</b></p>
+            <p class="x-large"><b>Apple Tree | Malus pumila</b></p>
           </div>
-      <div class="made-by">
-          <p class="text-muted">
+          <div class="made-by">
+            <p class="text-muted">
               <b class="cool-font">
                   <span>The apple tree (Malus pumila, commonly and erroneously called Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus..</span>
               </b>
-          </p>
-      </div><br>
+            </p>
+          </div><br>
           <div class="price">
             <p class="text-center xx-large avg">
-              <button class="btn btn-danger delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
-              <button class="btn btn-info editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
+              <button class="btn btn-secondary delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
+              <button class="btn btn-secondary editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
             </p>
           </div><br>
           <hr>
           <div class="extra-info text-muted">
-              <div class="pull-right">Updated: 4:00pm 2/23/2016</div><br>
-              <div class="container-fluid text-center editForm hidden">
-                  <div>
-                      <input type="text" id="" value="" placeholder=" Description"><br>
-                      <input type="text" id="" value="" placeholder=" Number of plants being planted"><br>
-                      <input type="text" id="" value="" placeholder="Add Plant Photo"><br>
-                      <button class="hvr-grow-shadow" id="editSubmit" type="submit" data-id="">Submit Updates</button>
-                  </div>
+            <div class="pull-right">Updated: 4:00pm 2/23/2016</div><br>
+            <div class="container-fluid text-center editForm hidden">
+              <div>
+                <input type="text" id="" value="" placeholder=" Description"><br>
+                <input type="text" id="" value="" placeholder=" Number of plants being planted"><br>
+                <input type="text" id="" value="" placeholder="Add Plant Photo"><br>
+                <button class="hvr-grow-shadow" id="editSubmit" type="submit" data-id="">Submit Updates</button>
               </div>
+            </div>
           </div><br>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
-<div class="col-md-6">
-  <div class="panel panel-default clicable">
-    <div class="panel-body">
-      <div class="top-img">
-        <img class="top-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Basil-Basilico-Ocimum_basilicum-albahaca.jpg/440px-Basil-Basilico-Ocimum_basilicum-albahaca.jpg">
-      </div>
-    <div class="top-content">
-        <div class="question">
-            <p class="x-large"><b>Basil | Ocimum basilicum</b></p>
+  <div class="col-md-6">
+    <div class="panel panel-default clicable">
+      <div class="panel-body">
+        <div class="top-img">
+          <img class="top-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Basil-Basilico-Ocimum_basilicum-albahaca.jpg/440px-Basil-Basilico-Ocimum_basilicum-albahaca.jpg">
         </div>
-    <div class="made-by">
-        <p class="text-muted">
-            <b class="cool-font">
+        <div class="top-content">
+          <div class="question">
+            <p class="x-large"><b>Basil | Ocimum basilicum</b></p>
+          </div>
+          <div class="made-by">
+            <p class="text-muted">
+              <b class="cool-font">
                 <span>Basil is possibly native to India, and has been cultivated there for more than 5,000 years. It was thoroughly familiar to the Greek authors Theophrastus and Dioscorides.</span>
             </b>
-        </p>
-    </div><br>
-        <div class="price">
-          <p class="text-center xx-large avg">
-            <button class="btn btn-danger delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
-            <button class="btn btn-info editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
-          </p>
-        </div><br>
-        <hr>
-        <div class="extra-info text-muted">
+            </p>
+          </div><br>
+          <div class="price">
+            <p class="text-center xx-large avg">
+              <button class="btn btn-secondary delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
+              <button class="btn btn-secondary editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
+            </p>
+          </div><br>
+          <hr>
+          <div class="extra-info text-muted">
             <div class="pull-right">Updated: 4:00pm 2/23/2016</div><br>
             <div class="container-fluid text-center editForm hidden">
-                <div>
-                    <input type="text" id="" value="" placeholder=" Description"><br>
-                    <input type="text" id="" value="" placeholder=" Number of plants being planted"><br>
-                    <input type="text" id="" value="" placeholder="Add Plant Photo"><br>
-                    <button class="hvr-grow-shadow" id="editSubmit" type="submit" data-id="">Submit Updates</button>
-                </div>
+              <div>
+                <input type="text" id="" value="" placeholder=" Description"><br>
+                <input type="text" id="" value="" placeholder=" Number of plants being planted"><br>
+                <input type="text" id="" value="" placeholder="Add Plant Photo"><br>
+                <button class="hvr-grow-shadow" id="editSubmit" type="submit" data-id="">Submit Updates</button>
+              </div>
             </div>
-        </div><br>
-  </div>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-  <div class="panel panel-default clicable">
-    <div class="panel-body">
-      <div class="top-img">
-        <img class="top-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Illustration_Anethum_graveolens0.jpg/440px-Illustration_Anethum_graveolens0.jpg">
-      </div>
-    <div class="top-content">
-        <div class="question">
-            <p class="x-large"><b>Dill | Anethum graveolens</b></p>
+          </div><br>
         </div>
-    <div class="made-by">
-        <p class="text-muted">
-            <b class="cool-font">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default clicable">
+      <div class="panel-body">
+        <div class="top-img">
+          <img class="top-img" src="https://modernbotanicalsblog.files.wordpress.com/2016/05/dill-seedlings1.jpg?w=809">
+        </div>
+        <div class="top-content">
+          <div class="question">
+            <p class="x-large"><b>Dill | Anethum graveolens</b></p>
+          </div>
+          <div class="made-by">
+            <p class="text-muted">
+              <b class="cool-font">
                 <span>Dill (Anethum graveolens) is an annual herb in the celery family Apiaceae. It is the only species in the genus Anethum. Dill is widely grown in Eurasia where its leaves and seeds are used as a herb or spice for flavouring food.</span>
             </b>
-        </p>
-    </div><br>
-        <div class="price">
-          <p class="text-center xx-large avg">
-            <button class="btn btn-danger delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
-            <button class="btn btn-info editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
-          </p>
-        </div><br>
-        <hr>
-        <div class="extra-info text-muted">
+            </p>
+          </div><br>
+          <div class="price">
+            <p class="text-center xx-large avg">
+              <button class="btn btn-secondary delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
+              <button class="btn btn-secondary editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
+            </p>
+          </div><br>
+          <hr>
+          <div class="extra-info text-muted">
             <div class="pull-right">Updated: 4:00pm 2/23/2016</div><br>
             <div class="container-fluid text-center editForm hidden">
-                <div>
-                    <input type="text" id="" value="" placeholder=" Description"><br>
-                    <input type="text" id="" value="" placeholder=" Number of plants being planted"><br>
-                    <input type="text" id="" value="" placeholder="Add Plant Photo"><br>
-                    <button class="hvr-grow-shadow" id="editSubmit" type="submit" data-id="">Submit Updates</button>
-                </div>
+              <div>
+                <input type="text" id="" value="" placeholder=" Description"><br>
+                <input type="text" id="" value="" placeholder=" Number of plants being planted"><br>
+                <input type="text" id="" value="" placeholder="Add Plant Photo"><br>
+                <button class="hvr-grow-shadow" id="editSubmit" type="submit" data-id="">Submit Updates</button>
+              </div>
             </div>
-        </div><br>
-  </div>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-  <div class="panel panel-default clicable">
-    <div class="panel-body">
-      <div class="top-img">
-        <img class="top-img" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNSiQbR1GA0-00FytW4YVPsU4p4Pa-iSToEivopdFLByW32h2Eknb5XqU">
-      </div>
-    <div class="top-content">
-        <div class="question">
-            <p class="x-large"><b>Sunflower | Helianthus</b></p>
+          </div><br>
         </div>
-    <div class="made-by">
-        <p class="text-muted">
-            <b class="cool-font">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default clicable">
+      <div class="panel-body">
+        <div class="top-img">
+          <img class="top-img" src="http://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/images/garden_article.jpg?itok=2w1OLvAy">
+        </div>
+        <div class="top-content">
+          <div class="question">
+            <p class="x-large"><b>Sunflower | Helianthus</b></p>
+          </div>
+          <div class="made-by">
+            <p class="text-muted">
+              <b class="cool-font">
                 <span>The genus is one of many in the Asteraceae that are known as sunflowers. Except for three species in South America, all Helianthus species are native to North America.</span>
             </b>
-        </p>
-    </div><br>
-        <div class="price">
-          <p class="text-center xx-large avg">
-            <button class="btn btn-danger delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
-            <button class="btn btn-info editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
-          </p>
-        </div><br>
-        <hr>
-        <div class="extra-info text-muted">
+            </p>
+          </div><br>
+          <div class="price">
+            <p class="text-center xx-large avg">
+              <button class="btn btn-secondary delete" data-id="{{this.plant_id}}" type="button" name="">Delete plant</button>
+              <button class="btn btn-secondary editBtn" data-id="{{this.plant_id}}" type="button" name="edit">Edit plant</button>
+            </p>
+          </div><br>
+          <hr>
+          <div class="extra-info text-muted">
             <div class="pull-right">Updated: 4:00pm 2/23/2016</div><br>
             <div class="container-fluid text-center editForm hidden">
-                <div>
-                    <input type="text" id="" value="" placeholder=" Description"><br>
-                    <input type="text" id="" value="" placeholder=" Number of plants being planted"><br>
-                    <input type="text" id="" value="" placeholder="Add Plant Photo"><br>
-                    <button class="hvr-grow-shadow" id="editSubmit" type="submit" data-id="">Submit Updates</button>
-                </div>
+              <div>
+                <input type="text" id="" value="" placeholder=" Description"><br>
+                <input type="text" id="" value="" placeholder=" Number of plants being planted"><br>
+                <input type="text" id="" value="" placeholder="Add Plant Photo"><br>
+                <button class="hvr-grow-shadow" id="editSubmit" type="submit" data-id="">Submit Updates</button>
+              </div>
             </div>
-        </div><br>
+          </div><br>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
 </div>
 <script src="/javascripts/demo.js" charset="utf-8"></script>
