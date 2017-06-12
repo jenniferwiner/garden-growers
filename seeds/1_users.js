@@ -10,7 +10,6 @@ exports.seed = function(knex) {
           garden_name: 'admin',
           email: 'admin@gmail.com',
           hashed_password: '$2a$12$bfIk1Fq6yvs78WxgtJohxOW2SWoc.iYUsYvzbYlpkISLnCW8i17PW',
-          // password
           zipcode: 80302,
           is_admin: true
         },

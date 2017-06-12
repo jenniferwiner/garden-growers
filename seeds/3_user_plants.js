@@ -8,15 +8,22 @@ exports.seed = function(knex) {
           id: 1,
           user_id: 2,
           plant_id: 1,
-          photo: 'https://southbaytraps.com/2946-thickbox_default/b52-venus-flytrap.jpg',
+          photo: 'https://southbaytraps.com/31-thickbox_default/jaws-venus-flytrap.jpg',
           description: 'I love my venus fly trap! It eats insects for breakfast'
         },
         {
           id: 2,
           user_id: 2,
           plant_id: 2,
-          photo: 'http://www.ksre.k-state.edu/hort-judging/images/flowers-foliages/African-violet-plant-s-web.jpg',
+          photo: 'https://maxpull-gdvuch3veo.netdna-ssl.com/wp-content/uploads/2009/01/african-violets.jpg',
           description: 'Always in bloom- Loves full sun!'
+        },
+        {
+          id: 3,
+          user_id: 3,
+          plant_id: 3,
+          photo: 'https://cmeimg-a.akamaihd.net/640/photos.demandstudios.com/getty/article/225/22/178805487.jpg',
+          description: 'Fuchsia is a genus of flowering plants that consists mostly of shrubs or small trees. Flowers are a bright, vibrant pink.'
         }])
       ])
     })
